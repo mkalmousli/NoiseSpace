@@ -3,14 +3,14 @@
 
 .top { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 6px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
-.brand span { font-size: 1.25rem; font-weight: 600; letter-spacing: .02em; }
+.brand span { font-size: 1.5rem; font-weight: 400; letter-spacing: .02em; }
 .brand img { display: block; filter: drop-shadow(0 3px 5px var(--shadow)); }
 
 .hero { text-align: center; padding: 22px 0 18px; }
-.hero h1 { font-size: 1.7rem; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; text-shadow: 0 1px 0 rgba(255, 255, 255, .5); }
+.hero h1 { font-size: 2rem; line-height: 1.2; font-weight: 400; letter-spacing: -.01em; text-shadow: 0 1px 0 rgba(255, 255, 255, .5); }
 .hero p { max-width: 520px; margin: 8px auto 0; color: var(--mute); }
 
-.lbl { margin: 18px 0 10px; font-size: .78rem; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.lbl { margin: 18px 0 10px; font-size: .95rem; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
 
 .chips { display: flex; flex-wrap: wrap; margin: 0 -4px; }
 .grid { display: flex; flex-wrap: wrap; margin: 0 -6px; }
@@ -18,7 +18,7 @@
 
 .about { margin-top: 28px; color: var(--mute); font-size: .95rem; }
 .about p { margin-bottom: 10px; }
-.about strong { color: var(--ink); font-weight: 600; }
+.about strong { color: var(--ink); font-weight: 400; }
 .note { color: var(--mute); }
 
 .dock {
@@ -35,7 +35,7 @@
 
 @media (min-width: 560px) {
   .card { width: 33.333%; }
-  .hero h1 { font-size: 2.2rem; }
+  .hero h1 { font-size: 3rem; }
 }
 @media (min-width: 860px) {
   .card { width: 25%; }

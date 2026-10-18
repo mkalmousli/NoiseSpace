@@ -62,3 +62,5 @@ Pushing to `main` publishes the site to GitHub Pages through `.github/workflows/
 MIT
 
 By [al-mo.de](https://al-mo.de). MIT licensed.
+
+Font: [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand) (SIL OFL), self-hosted.

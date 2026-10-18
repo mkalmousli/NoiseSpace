@@ -33,7 +33,7 @@ button { touch-action: manipulation; }
 .orb { width: 52px; height: 52px; margin: 0 auto 8px; color: #17606e; }
 .card.on .orb { background: radial-gradient(circle at 35% 25%, #eaffff, #6fd8d0 45%, #1f93a8); color: #fff; }
 .orb svg, .play svg, .gbtn svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.nm { display: block; font-weight: 600; }
+.nm { display: block; font-weight: 400; }
 .ds { display: block; font-size: .75rem; color: var(--mute); line-height: 1.3; min-height: 2em; }
 
 .chip { margin: 4px; padding: 7px 16px; border-radius: 999px; font-size: .9rem; }
@@ -64,10 +64,10 @@ select option { color: #1d3b44; }
 [data-theme="dark"] .tog::before { opacity: .3; }
 
 .faq { margin-bottom: 10px; padding: 0 16px; border-radius: 16px; background: var(--glass); border: 1px solid var(--edge); box-shadow: 0 4px 14px var(--shadow); }
-.faq summary { padding: 14px 0; font-weight: 600; cursor: pointer; }
+.faq summary { padding: 14px 0; font-weight: 400; cursor: pointer; }
 .faq p { margin: 0 0 14px; color: var(--mute); }
 .refs { color: var(--mute); font-size: .9rem; padding-left: 20px; }
 .refs li { margin-bottom: 6px; list-style: disc; }
 .upd { position: fixed; left: 50%; top: 10px; z-index: 9; transform: translateX(-50%); padding: 8px 8px 8px 16px; border-radius: 999px; background: var(--glass-hi); border: 1px solid var(--edge); box-shadow: 0 6px 18px var(--shadow); font-size: .9rem; white-space: nowrap; }
 .upd[hidden] { display: none; }
-.upd button { margin-left: 8px; padding: 4px 14px; border-radius: 999px; background: var(--acc); color: #fff; font-weight: 600; }
+.upd button { margin-left: 8px; padding: 4px 14px; border-radius: 999px; background: var(--acc); color: #fff; font-weight: 400; }
