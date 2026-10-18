@@ -1,17 +1,17 @@
 /* Theme tokens, reset, and the Frutiger Aero sky backdrop. */
 :root {
-  --bg1: #dff3f7; --bg2: #eef8e9; --ink: #1d3b44; --mute: #55747e;
+  --bg1: #e9f5f7; --bg2: #f1f8ee; --ink: #1d3b44; --mute: #55747e;
   --glass: rgba(255, 255, 255, .55); --glass-hi: rgba(255, 255, 255, .75);
   --edge: rgba(255, 255, 255, .9); --shadow: rgba(40, 110, 130, .22);
   --acc: #2f9db0; --acc2: #7fd6c2; --orb-a: #ffffff; --orb-b: #bfe9ef; --orb-c: #63c0d0;
-  --hill: rgba(150, 215, 170, .55); --bubble: rgba(255, 255, 255, .55);
+  --hill: rgba(150, 215, 170, .22); --bubble: rgba(255, 255, 255, .22);
 }
 [data-theme="dark"] {
   --bg1: #0b1923; --bg2: #123238; --ink: #e2f2f4; --mute: #90b2ba;
   --glass: rgba(40, 84, 98, .42); --glass-hi: rgba(80, 140, 156, .4);
   --edge: rgba(160, 222, 232, .28); --shadow: rgba(0, 0, 0, .5);
   --acc: #4fc3d2; --acc2: #3f9c88; --orb-a: #d6f6fa; --orb-b: #3e93a4; --orb-c: #134a5a;
-  --hill: rgba(40, 110, 100, .45); --bubble: rgba(140, 220, 235, .16);
+  --hill: rgba(40, 110, 100, .2); --bubble: rgba(140, 220, 235, .05);
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -22,7 +22,8 @@ body {
   margin: 0; min-height: 100vh; padding-bottom: 130px;
   color: var(--ink); background: var(--bg1);
   background: linear-gradient(180deg, var(--bg1), var(--bg2)) fixed;
-  font: 16px/1.5 "Segoe UI", "Trebuchet MS", Tahoma, "Helvetica Neue", Arial, sans-serif;
+  font: 16px/1.6 ui-rounded, "SF Pro Rounded", "Avenir Next", "Segoe UI Variable Text", "Segoe UI", Nunito, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: .01em; -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, p, ul { margin: 0; padding: 0; }
@@ -39,7 +40,7 @@ button { cursor: pointer; border: 0; background: none; }
 }
 .sky i {
   position: absolute; border-radius: 50%; background: var(--bubble);
-  box-shadow: inset 0 0 24px rgba(255, 255, 255, .5);
+  box-shadow: inset 0 0 24px rgba(255, 255, 255, .2);
 }
 .sky i:nth-child(1) { width: 220px; height: 220px; left: 6%; top: 10%; }
 .sky i:nth-child(2) { width: 120px; height: 120px; right: 12%; top: 22%; }
