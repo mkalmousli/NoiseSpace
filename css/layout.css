@@ -1,5 +1,5 @@
 /* Page structure: header, hero, grid, dock. Mobile first. */
-.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
 
 .top { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 6px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
@@ -8,9 +8,9 @@
 
 .hero { text-align: center; padding: 22px 0 18px; }
 .hero h1 { font-size: 2rem; line-height: 1.2; font-weight: 400; letter-spacing: -.01em; text-shadow: 0 1px 0 rgba(255, 255, 255, .5); }
-.hero p { max-width: 520px; margin: 8px auto 0; color: var(--mute); }
+.hero p { max-width: 600px; margin: 10px auto 0; font-size: 1.25rem; color: var(--mute); }
 
-.lbl { margin: 18px 0 10px; font-size: .95rem; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
+.lbl { margin: 18px 0 10px; font-size: 1.1rem; font-weight: 400; letter-spacing: 1.4px; text-transform: uppercase; color: var(--mute); }
 
 .chips { display: flex; flex-wrap: wrap; margin: 0 -4px; }
 .grid { display: flex; flex-wrap: wrap; margin: 0 -6px; }
@@ -24,14 +24,14 @@
 .dock {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
   display: flex; align-items: center; gap: 12px;
-  max-width: 760px; margin: 0 auto 10px; padding: 10px 14px;
+  max-width: 820px; margin: 0 auto 10px; padding: 10px 16px;
   width: calc(100% - 20px);
 }
 .dock .mid { flex: 1; min-width: 0; }
-.status { display: block; font-size: .8rem; color: var(--mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.sleep { display: flex; flex-direction: column; align-items: flex-end; font-size: .75rem; color: var(--mute); }
+.status { display: block; font-size: 1.05rem; color: var(--mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sleep { display: flex; flex-direction: column; align-items: flex-end; font-size: .95rem; color: var(--mute); }
 
-.foot { text-align: center; padding: 24px 16px 0; font-size: .85rem; color: var(--mute); }
+.foot { text-align: center; padding: 24px 16px 0; font-size: 1.05rem; color: var(--mute); }
 
 @media (min-width: 560px) {
   .card { width: 33.333%; }
@@ -47,7 +47,7 @@
   .sleep span { display: none; }
 }
 
-.nav { display: flex; align-items: center; gap: 14px; font-size: .9rem; }
+.nav { display: flex; align-items: center; gap: 16px; font-size: 1.15rem; }
 .nav a, .foot a { text-decoration: none; }
 .nav a:hover, .foot a:hover { text-decoration: underline; }
 @media (max-width: 440px) { .nav a:nth-child(2) { display: none; } }

@@ -17,11 +17,11 @@
       s = NS.sounds[i];
       li = d.createElement('li');
       li.id = 'c-' + s.id;
-      li.className = 'card';
+      li.className = 'card'; li.setAttribute('style', '--h:' + s.h);
       li.innerHTML =
         '<button type="button" class="tog" data-id="' + s.id + '" aria-pressed="false">' +
         '<span class="orb">' + NS.icon(s.id) + '</span>' +
-        '<span class="nm">' + s.name + '</span><span class="ds">' + s.desc + '</span></button>' +
+        '<span class="nm">' + s.name + '</span><span class="st">ON</span><span class="ds">' + s.desc + '</span></button>' +
         '<input class="vol" type="range" min="0" max="100" data-id="' + s.id + '" value="' +
         Math.round(NS.volume(s.id) * 100) + '" aria-label="' + s.name + ' volume">';
       grid.appendChild(li);

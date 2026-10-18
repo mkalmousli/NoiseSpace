@@ -20,10 +20,10 @@
 
 ## Features
 
-- **12 sounds, all synthesized live in your browser** from physical models (no audio files):
+- **13 sounds, all synthesized live in your browser** from physical models (no audio files):
   rain and stream (Minnaert bubble resonances, Marshall-Palmer drop sizes), ocean (swell/crash/foam),
   wind, fireplace (power-law crackle), crickets (Dolbear), singing bowl (inharmonic modes),
-  white / pink / brown noise, 10 Hz binaural focus tone and a space drone.
+  people talking (formant-synthesized café murmur), white / pink / brown noise, 10 Hz binaural focus tone and a space drone.
   See the [FAQ](https://mkalmousli.github.io/NoiseSpace/#faq) for the science and references.
 - **Layer and mix** any sounds with per-sound volume and a master fader.
 - **Presets**: Deep focus, Study, Relax, Sleep, Cozy, Forest, Night.
@@ -42,6 +42,7 @@ under 100 lines.
 | `index.html` | Markup, SEO metadata, JSON-LD |
 | `css/base.css` · `layout.css` · `aero.css` | Tokens and backdrop · structure · glass components |
 | `js/noise.js` · `drops.js` · `waves.js` | Noise colors · rain/stream/fire models · ocean/crickets |
+| `js/voices.js` | Formant-synthesized talker babble |
 | `js/helpers.js` · `engine.js` | Builder helpers · audio engine |
 | `js/sounds-nature.js` · `sounds-tone.js` · `catalog.js` | Sound graphs · tones · catalog and presets |
 | `js/store.js` · `icons.js` · `ui.js` · `app.js` | Settings · icons · rendering · wiring |

@@ -13,6 +13,7 @@
     focus: 'M4 15v-3a8 8 0 0 1 16 0v3M4 15h3v5H4zM17 15h3v5h-3z',
     space: 'M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z',
     bowl: 'M3 11h18a9 9 0 0 1-18 0zM8 21h8',
+    talk: 'M4 5h16v11H11l-5 4v-4H4zM8 9.5h8M8 12.5h5',
     crickets: 'M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5L18 18M6 18l2.5-2.5M15.5 8.5L18 6',
     play: 'M8 5l11 7-11 7z',
     stop: 'M7 6h3v12H7zM14 6h3v12h-3z',
