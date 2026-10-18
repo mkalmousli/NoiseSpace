@@ -1,0 +1,28 @@
+/* Old-school skin: square corners, hard ink borders and offset shadows, muted paper colors. */
+* { border-radius: 0 !important; }
+body { background-image: repeating-linear-gradient(0deg, rgba(60, 40, 10, .035) 0 1px, transparent 1px 3px); }
+.chip, .gbtn, .sleep, .tabs, .pop, .dock, .tog, .faq, select, .sheet { border: 2px solid var(--line); }
+.chip, .gbtn, .sleep, .tog { box-shadow: 2px 2px 0 var(--line); }
+.chip:active, .gbtn:active, .sleep:active, .tog:active { transform: translate(2px, 2px); box-shadow: none; }
+.chip.sel { background: var(--acc); color: var(--on); box-shadow: none; transform: translate(2px, 2px); }
+.dock, .pop { box-shadow: 4px 4px 0 var(--line); }
+.sheet { box-shadow: 0 -4px 0 var(--line); }
+@media (min-width: 700px) { .sheet { box-shadow: 5px 5px 0 var(--line); } }
+.tog { border-width: 2px; }
+.orb { color: hsl(var(--h) 32% 30%); }
+.card.on .tog { background: hsl(var(--h) 34% 76%); border-color: var(--line); box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .25); transform: translate(2px, 2px); }
+.card.on .orb, .card.on .nm { color: hsl(var(--h) 40% 14%); }
+[data-theme="dark"] .orb { color: hsl(var(--h) 30% 68%); }
+[data-theme="dark"] .card.on .tog { background: hsl(var(--h) 24% 30%); border-color: hsl(var(--h) 30% 62%); box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .45); }
+[data-theme="dark"] .card.on .orb, [data-theme="dark"] .card.on .nm { color: hsl(var(--h) 35% 88%); }
+.play { box-shadow: 3px 3px 0 var(--line); border: 2px solid var(--line); }
+.play:active { transform: translate(3px, 3px); box-shadow: none; }
+body.playing .play { animation: none; }
+.vol::-webkit-slider-runnable-track { height: 6px; border: 1px solid var(--line); background: var(--bg); }
+.vol::-moz-range-track { height: 6px; border: 1px solid var(--line); background: var(--bg); }
+.vol::-webkit-slider-thumb { border: 2px solid var(--line); border-radius: 0; background: var(--acc); }
+.vol::-moz-range-thumb { border: 2px solid var(--line); border-radius: 0; background: var(--acc); }
+.tabs button[aria-selected="true"], .chip.go { box-shadow: none; }
+.brand img { filter: sepia(.35) saturate(.8); }
+.upd { border-width: 2px; box-shadow: 3px 3px 0 var(--line); }
+.step input { border-bottom: 2px solid var(--line); }

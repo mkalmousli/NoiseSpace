@@ -1,10 +1,10 @@
-/* Flat, calm tokens (blue-green hues, WCAG-minded contrast), reset and base type. */
+/* Old-school paper tokens (warm, slightly off colors, WCAG-minded contrast), reset and base type. */
 @font-face { font-family: "Patrick Hand"; font-display: swap; src: url(../fonts/patrick-hand.woff2) format("woff2"); }
 :root {
-  --bg: #f3f8f9; --card: #fff; --line: #d9e5e8; --ink: #1d343b; --mute: #4f6a73; --acc: #23808f; --on: #fff;
+  --bg: #e4d9bf; --card: #f2ead6; --line: #3a3326; --ink: #2b261d; --mute: #5f5643; --acc: #9c4f2e; --on: #f6eedb;
 }
 [data-theme="dark"] {
-  --bg: #0e1a1f; --card: #172830; --line: #27404a; --ink: #dce9eb; --mute: #93abb2; --acc: #5fc0cc; --on: #0b1a20;
+  --bg: #1e1c17; --card: #2a2720; --line: #7d7258; --ink: #e6ddc4; --mute: #a99f85; --acc: #d29a48; --on: #1e1c17;
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }

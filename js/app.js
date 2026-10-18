@@ -1,7 +1,16 @@
 /* Wiring: clicks, sliders, presets, theme, service worker. */
 (function (w, d) {
-  var NS = w.NS, $ = NS.$, S = NS.state, last = [];
-  NS.timerEnd = function () { last = []; NS.sync(); };
+  var NS = w.NS, $ = NS.$, S = NS.state, last = [], cur = -1;
+  NS.timerEnd = function () { last = []; mark(-1); NS.sync(); };
+
+  function mark(i) {
+    var b = $('presets').childNodes, k;
+    cur = i;
+    for (k = 0; k < b.length; k++) {
+      b[k].className = k === i ? 'chip sel' : 'chip';
+      b[k].setAttribute('aria-pressed', k === i ? 'true' : 'false');
+    }
+  }
 
   function setSlider(id, v) {
     var el = $('c-' + id).lastChild;
@@ -9,13 +18,15 @@
   }
 
   function toggle(id) {
+    mark(-1);
     NS.toggle(id, !NS.isOn(id));
     NS.sync();
   }
 
-  function preset(p) {
-    var id;
-    NS.stopAll();
+  function preset(i) {
+    var id, p = NS.presets[i];
+    if (i === cur) { NS.stopAll(); last = []; mark(-1); NS.sync(); return; }
+    NS.stopAll(); mark(i);
     for (id in p.mix) {
       if (!p.mix.hasOwnProperty(id)) continue;
       S.vol[id] = p.mix[id];
@@ -26,19 +37,20 @@
   }
 
   function playPause() {
-    if (NS.count()) { last = NS.stopAll(); }
+    if (NS.count()) { last = NS.stopAll(); mark(-1); }
     else if (last.length) { for (var i = 0; i < last.length; i++) NS.toggle(last[i], true); }
-    else preset(NS.presets[1]);
+    else preset(1);
     NS.sync();
   }
 
   function theme(t) {
     S.theme = t;
     d.documentElement.setAttribute('data-theme', t);
+    d.documentElement.style.colorScheme = t;
     $('theme').innerHTML = NS.icon(t === 'dark' ? 'sun' : 'moon');
     $('theme').setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     var m = d.querySelector('meta[name=theme-color]');
-    if (m) m.setAttribute('content', t === 'dark' ? '#0e1a1f' : '#f3f8f9');
+    if (m) m.setAttribute('content', t === 'dark' ? '#1e1c17' : '#e4d9bf');
   }
 
   NS.render();
@@ -57,12 +69,12 @@
   });
   $('presets').addEventListener('click', function (e) {
     var b = NS.closest(e.target, 'chip');
-    if (b) preset(NS.presets[b.getAttribute('data-p')]);
+    if (b) preset(+b.getAttribute('data-p'));
   });
   $('master').addEventListener('input', function () { NS.setMaster(this.value / 100); NS.save(); });
   $('play').addEventListener('click', playPause);
   $('theme').addEventListener('click', function () {
-    theme(S.theme === 'dark' ? 'light' : 'dark');
+    theme(d.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
     NS.save();
   });
 

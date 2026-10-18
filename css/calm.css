@@ -1,6 +1,6 @@
 /* Calm ambient backdrop (only while sounds play), bigger play button, sheet tabs. */
-:root { --ring: rgba(35, 128, 143, .18); --b1: hsla(190, 60%, 62%, .26); --b2: hsla(165, 50%, 62%, .2); --b3: hsla(215, 55%, 68%, .2); }
-[data-theme="dark"] { --ring: rgba(95, 192, 204, .2); --b1: hsla(190, 60%, 40%, .26); --b2: hsla(165, 50%, 36%, .2); --b3: hsla(225, 55%, 44%, .22); }
+:root { --ring: rgba(156, 79, 46, .2); --b1: hsla(28, 55%, 60%, .28); --b2: hsla(80, 30%, 55%, .22); --b3: hsla(200, 30%, 60%, .18); }
+[data-theme="dark"] { --ring: rgba(210, 154, 72, .2); --b1: hsla(28, 50%, 36%, .3); --b2: hsla(80, 25%, 30%, .25); --b3: hsla(200, 25%, 34%, .22); }
 body::before { content: ""; position: fixed; z-index: -1; inset: -25%; pointer-events: none; opacity: 0; transition: opacity 5s ease;
   background: radial-gradient(circle at 25% 30%, var(--b1), transparent 42%), radial-gradient(circle at 75% 65%, var(--b2), transparent 42%), radial-gradient(circle at 55% 15%, var(--b3), transparent 38%);
   will-change: transform; animation: drift 70s ease-in-out infinite alternate; animation-play-state: paused; }

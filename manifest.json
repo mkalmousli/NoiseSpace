@@ -5,8 +5,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#e6f6f8",
-  "theme_color": "#35a3b5",
+  "background_color": "#e4d9bf",
+  "theme_color": "#9c4f2e",
   "categories": ["productivity", "health", "music"],
   "icons": [
     { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
