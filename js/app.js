@@ -52,7 +52,7 @@
     $('theme').innerHTML = NS.icon(t === 'dark' ? 'sun' : 'moon');
     $('theme').setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     var m = d.querySelector('meta[name=theme-color]');
-    if (m) m.setAttribute('content', t === 'dark' ? '#0e1b22' : '#e9f5f7');
+    if (m) m.setAttribute('content', t === 'dark' ? '#0e1a1f' : '#f3f8f9');
   }
 
   NS.render();

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NoiseSpace – Free Focus, Study &amp; Relaxation Sounds</title>
 <meta name="description" content="Mix rain, ocean, fireplace, wind and white, pink or brown noise for focus, study, work and sleep. Free, fast, offline-ready and ad-free.">
-<meta name="theme-color" content="#e9f5f7">
+<meta name="theme-color" content="#f3f8f9">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://mkalmousli.github.io/NoiseSpace/">
 <link rel="icon" href="favicon.ico" sizes="48x48">
@@ -54,31 +54,35 @@ try {
 </script>
 </head>
 <body>
-<div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-
-<header class="wrap top">
-  <a class="brand" href="./"><img src="img/logo.png" width="40" height="40" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
-  <nav class="nav" aria-label="Site"><a href="#faq">FAQ</a><a href="https://github.com/mkalmousli/NoiseSpace">Source</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
+<div class="app">
+<header class="top">
+  <a class="brand" href="./"><img src="img/logo.png" width="32" height="32" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
+  <nav class="nav" aria-label="Site"><a href="#faq">FAQ</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
   <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button></nav>
 </header>
+<main>
+  <h1 class="sr">NoiseSpace: sounds for focus, study &amp; calm</h1>
+  <div id="presets" class="chips" role="group" aria-label="Presets"></div>
+  <ul id="grid" class="grid"></ul>
+  <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
+</main>
+<div id="upd" class="upd" role="status" hidden>New version ready <button type="button" id="updgo">Update</button></div>
+<div class="dock" role="region" aria-label="Playback controls">
+  <button id="play" class="play" type="button" aria-label="Play"></button>
+  <div class="mid">
+    <span id="status" class="status">&nbsp;</span>
+    <input id="master" class="vol" type="range" min="0" max="100" value="80" aria-label="Master volume">
+  </div>
+  <label class="sleep"><span id="left">&nbsp;</span>
+    <select id="sleep" aria-label="Sleep timer">
+      <option value="0">Timer off</option><option value="15">15 min</option><option value="30">30 min</option>
+      <option value="60">1 hour</option><option value="90">90 min</option><option value="120">2 hours</option>
+    </select>
+  </label>
+</div>
 
-<main class="wrap">
-  <section class="hero">
-    <h1>Sounds for focus, study &amp; calm</h1>
-    <p>Layer rain, ocean, fire and noise colors into your own perfect mix. Free, ad-free, works offline.</p>
-  </section>
-
-  <section aria-labelledby="ph">
-    <h2 id="ph" class="lbl">Presets</h2>
-    <div id="presets" class="chips"></div>
-  </section>
-
-  <section aria-labelledby="mx">
-    <h2 id="mx" class="lbl">Mixer</h2>
-    <ul id="grid" class="grid"></ul>
-    <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
-  </section>
-<section id="faq" class="faqs">
+</div>
+<section id="faq" class="wrap faqs">
   <h2 class="lbl">FAQ &amp; science</h2>
   <details class="faq"><summary>Where do the sounds come from?</summary><p>Eight sounds (rain, ocean, wind, stream, fireplace, crickets, singing bowl and people talking) are real field recordings released under CC0 on Freesound.org, trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Credits are listed at the bottom of this page.</p></details>
   <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
@@ -115,29 +119,11 @@ try {
     <li>Kellet, P. Pink noise filter (musicdsp.org), used for the pink noise generator.</li>
   </ul>
 </section>
-</main>
-
-<div id="upd" class="upd" role="status" hidden>New version ready <button type="button" id="updgo">Update</button></div>
-<div class="dock" role="region" aria-label="Playback controls">
-  <button id="play" class="play" type="button" aria-label="Play"></button>
-  <div class="mid">
-    <span id="status" class="status">&nbsp;</span>
-    <input id="master" class="vol" type="range" min="0" max="100" value="80" aria-label="Master volume">
-  </div>
-  <label class="sleep"><span id="left">&nbsp;</span>
-    <select id="sleep" aria-label="Sleep timer">
-      <option value="0">Timer off</option><option value="15">15 min</option><option value="30">30 min</option>
-      <option value="60">1 hour</option><option value="90">90 min</option><option value="120">2 hours</option>
-    </select>
-  </label>
-</div>
-
 <footer class="wrap foot">
   <a href="#faq">FAQ &amp; science</a> &middot; <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
   <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>
   Made by <a href="https://al-mo.de" rel="author">al-mo.de</a> &middot; MIT licensed
 </footer>
-
 <script defer src="js/store.js"></script><script defer src="js/icons.js"></script>
 <script defer src="js/noise.js"></script><script defer src="js/drops.js"></script><script defer src="js/waves.js"></script>
 <script defer src="js/sounds-nature.js"></script><script defer src="js/sounds-tone.js"></script>

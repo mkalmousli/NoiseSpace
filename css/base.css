@@ -1,54 +1,27 @@
+/* Flat, calm tokens (blue-green hues, WCAG-minded contrast), reset and base type. */
 @font-face { font-family: "Patrick Hand"; font-display: swap; src: url(../fonts/patrick-hand.woff2) format("woff2"); }
-/* Theme tokens, reset, and the Frutiger Aero sky backdrop. */
 :root {
-  --bg1: #e9f5f7; --bg2: #f1f8ee; --ink: #1f3a42; --mute: #4a6a74;
-  --glass: rgba(255, 255, 255, .55); --glass-hi: rgba(255, 255, 255, .75);
-  --edge: rgba(255, 255, 255, .9); --shadow: rgba(40, 110, 130, .22);
-  --acc: #23808f; --acc2: #86cdb8; --orb-a: #ffffff; --orb-b: #bfe9ef; --orb-c: #63c0d0;
-  --dockbg: rgba(243, 251, 252, .94); --hill: rgba(150, 215, 170, .22); --bubble: rgba(255, 255, 255, .22);
+  --bg: #f3f8f9; --card: #fff; --line: #d9e5e8; --ink: #1d343b; --mute: #4f6a73; --acc: #23808f; --on: #fff;
 }
 [data-theme="dark"] {
-  --bg1: #0e1b22; --bg2: #14292f; --ink: #d9e8ea; --mute: #93b0b7;
-  --glass: rgba(40, 84, 98, .42); --glass-hi: rgba(80, 140, 156, .4);
-  --edge: rgba(160, 222, 232, .28); --shadow: rgba(0, 0, 0, .5);
-  --acc: #5fc0cc; --acc2: #46a08c; --orb-a: #d6f6fa; --orb-b: #3e93a4; --orb-c: #134a5a;
-  --dockbg: rgba(20, 40, 48, .94); --hill: rgba(40, 110, 100, .2); --bubble: rgba(140, 220, 235, .05);
+  --bg: #0e1a1f; --card: #172830; --line: #27404a; --ink: #dce9eb; --mute: #93abb2; --acc: #5fc0cc; --on: #0b1a20;
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
-html { font-synthesis: none; -webkit-text-size-adjust: 100%; }
-
+html { font-synthesis: none; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
-  margin: 0; min-height: 100vh; padding-bottom: 150px;
-  color: var(--ink); background: var(--bg1);
-  background: linear-gradient(180deg, var(--bg1), var(--bg2)) fixed;
-  font: 19px/1.5 "Patrick Hand", ui-rounded, "Segoe UI", "Trebuchet MS", sans-serif;
+  margin: 0; color: var(--ink); background: var(--bg);
+  font: 18px/1.4 "Patrick Hand", ui-rounded, "Segoe UI", "Trebuchet MS", sans-serif;
   letter-spacing: .015em; -webkit-font-smoothing: antialiased;
 }
-
 h1, h2, p, ul { margin: 0; padding: 0; }
 ul { list-style: none; }
 a { color: var(--acc); }
 button, select, input { font: inherit; color: inherit; }
-button { cursor: pointer; border: 0; background: none; }
+button { cursor: pointer; border: 0; background: none; touch-action: manipulation; }
 :focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
-
-.sky { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; overflow: hidden; }
-.sky::after {
-  content: ""; position: absolute; left: -25%; bottom: -22vh; width: 150%; height: 46vh;
-  border-radius: 50% 50% 0 0; background: linear-gradient(180deg, var(--hill), transparent);
-}
-.sky i {
-  position: absolute; border-radius: 50%; background: var(--bubble);
-  box-shadow: inset 0 0 24px rgba(255, 255, 255, .2);
-}
-.sky i:nth-child(1) { width: 220px; height: 220px; left: 6%; top: 10%; }
-.sky i:nth-child(2) { width: 120px; height: 120px; right: 12%; top: 22%; }
-.sky i:nth-child(3) { width: 300px; height: 300px; right: -60px; bottom: 18%; }
-
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
-html{scroll-behavior:smooth}
