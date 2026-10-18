@@ -29,8 +29,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .vol::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -7.5px; border-radius: 50%; border: 0; background: var(--acc); }
 .vol::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; border: 0; background: var(--acc); }
 
-.play { flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--acc); color: var(--on); }
-.play svg { width: 20px; height: 20px; fill: currentColor; stroke: none; }
+.play { flex: none; display: flex; align-items: center; justify-content: center; width: 68px; height: 68px; border-radius: 50%; background: var(--acc); color: var(--on); }
+.play svg { width: 30px; height: 30px; fill: currentColor; stroke: none; }
 select { padding: 4px 8px; border-radius: 10px; font-size: 1rem; }
 select option { color: #1d343b; }
 

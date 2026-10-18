@@ -46,6 +46,7 @@
       li.className = on ? (NS.busy[id] ? 'card on load' : 'card on') : 'card';
       li.firstChild.setAttribute('aria-pressed', on ? 'true' : 'false');
     }
+    document.body.className = n ? 'playing' : '';
     NS.$('play').innerHTML = NS.icon(n ? 'stop' : 'play');
     NS.$('play').setAttribute('aria-label', n ? 'Pause all sounds' : 'Play');
     NS.$('status').firstChild.nodeValue = !NS.supported ? 'Web Audio is not supported here.' :

@@ -40,6 +40,7 @@ try {
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/aero.css">
+<link rel="stylesheet" href="css/calm.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Where do the sounds come from?","acceptedAnswer":{"@type":"Answer","text":"Eight sounds (rain, ocean, wind, stream, fireplace, crickets, singing bowl and people talking) are real field recordings released under CC0 on Freesound.org, trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Credits are listed at the bottom of this page."}},
@@ -86,17 +87,40 @@ try {
 <div id="faq" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t" hidden>
 <div class="grab"><button id="shx" class="gbtn" type="button" aria-label="Close">&times;</button></div>
 <div class="body">
-<h2 class="lbl" id="sh-t">FAQ &amp; science</h2>
+<div class="tabs" role="tablist" id="tabs"><button type="button" role="tab" data-t="0" aria-selected="true">Help</button><button type="button" role="tab" data-t="1" aria-selected="false">Sounds</button><button type="button" role="tab" data-t="2" aria-selected="false">Science</button><button type="button" role="tab" data-t="3" aria-selected="false">Refs</button><button type="button" role="tab" data-t="4" aria-selected="false">Credits</button></div>
+<h2 class="sr" id="sh-t">About NoiseSpace</h2>
+<section class="pane" id="p0">
   <details class="faq"><summary>Where do the sounds come from?</summary><p>Eight sounds (rain, ocean, wind, stream, fireplace, crickets, singing bowl and people talking) are real field recordings released under CC0 on Freesound.org, trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Credits are listed at the bottom of this page.</p></details>
-  <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
-  <details class="faq"><summary>Does noise really help me focus or sleep?</summary><p>Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works.</p></details>
-  <details class="faq"><summary>How is rain generated?</summary><p>Each raindrop makes an air bubble that rings at its Minnaert resonance, about 3.26 / R hertz for a bubble of radius R metres. Drops land at random (Poisson) times with an exponential size spread, as in real rain.</p></details>
-  <details class="faq"><summary>What about fire, stream, ocean and crickets?</summary><p>Fire is a low roar plus random crackles whose sizes follow a heavy-tailed power law, like other crackling-noise systems. Streams are many rising-pitch bubbles. Ocean is a swell, crash and foam cycle of about 10 seconds. Crickets chirp in 3-pulse trains near 4.5 kHz.</p></details>
-  <details class="faq"><summary>What is the focus tone? Do I need headphones?</summary><p>It plays 200 Hz in one ear and 210 Hz in the other, so your brain perceives a 10 Hz (alpha range) binaural beat. Headphones are required. A 2019 meta-analysis found small benefits for attention and anxiety, but the effect is not guaranteed.</p></details>
   <details class="faq"><summary>Why can't I hear anything on my phone?</summary><p>Tap a sound or the play button first, because browsers block audio until you interact. Then check the volume, the silent switch and that the tab is not muted.</p></details>
   <details class="faq"><summary>Is it private? Does it work offline?</summary><p>Yes. There are no accounts, cookies or trackers. Volumes and theme are stored only on your device, and after the first visit the app works without internet.</p></details>
   <details class="faq"><summary>Can I contribute or report a bug?</summary><p>Yes! NoiseSpace is open source under the MIT license. Source code, issues and ideas live on GitHub: <a href="https://github.com/mkalmousli/NoiseSpace">github.com/mkalmousli/NoiseSpace</a>.</p></details>
-  <h2 class="lbl">Sound credits</h2>
+</section>
+<section class="pane" id="p1" hidden>
+  <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
+  <details class="faq"><summary>How is rain generated?</summary><p>Each raindrop makes an air bubble that rings at its Minnaert resonance, about 3.26 / R hertz for a bubble of radius R metres. Drops land at random (Poisson) times with an exponential size spread, as in real rain.</p></details>
+  <details class="faq"><summary>What about fire, stream, ocean and crickets?</summary><p>Fire is a low roar plus random crackles whose sizes follow a heavy-tailed power law, like other crackling-noise systems. Streams are many rising-pitch bubbles. Ocean is a swell, crash and foam cycle of about 10 seconds. Crickets chirp in 3-pulse trains near 4.5 kHz.</p></details>
+  <details class="faq"><summary>What is the focus tone? Do I need headphones?</summary><p>It plays 200 Hz in one ear and 210 Hz in the other, so your brain perceives a 10 Hz (alpha range) binaural beat. Headphones are required. A 2019 meta-analysis found small benefits for attention and anxiety, but the effect is not guaranteed.</p></details>
+</section>
+<section class="pane" id="p2" hidden>
+  <details class="faq"><summary>Does noise really help me focus or sleep?</summary><p>Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works.</p></details>
+  <ul class="refs">
+    <li>Söderlund, G. et al. (2007). Listening to noise improves cognitive performance in children with ADHD. <i>J. Child Psychol. Psychiatry</i> 48.</li>
+    <li>Zhou, J. et al. (2012). Pink noise: effect on complexity synchronization of brain activity and sleep consolidation. <i>J. Theor. Biol.</i> 306.</li>
+    <li>Garcia-Argibay, M. et al. (2019). Efficacy of binaural auditory beats in cognition, anxiety and pain perception: a meta-analysis. <i>Psychol. Res.</i> 83.</li>
+  </ul>
+</section>
+<section class="pane" id="p3" hidden>
+  <ul class="refs">
+    <li>Minnaert, M. (1933). On musical air-bubbles and the sounds of running water. <i>Phil. Mag.</i> 16.</li>
+    <li>Prosperetti, A. &amp; Oguz, H. (1993). The impact of drops on liquid surfaces and the underwater noise of rain. <i>Annu. Rev. Fluid Mech.</i> 25.</li>
+    <li>Marshall, J. &amp; Palmer, W. (1948). The distribution of raindrops with size. <i>J. Meteorology</i> 5.</li>
+    <li>Sethna, J., Dahmen, K. &amp; Myers, C. (2001). Crackling noise. <i>Nature</i> 410.</li>
+    <li>Voss, R. &amp; Clarke, J. (1975). 1/f noise in music and speech. <i>Nature</i> 258.</li>
+    <li>Dolbear, A. (1897). The cricket as a thermometer. <i>American Naturalist</i> 31.</li>
+    <li>Kellet, P. Pink noise filter (musicdsp.org), used for the pink noise generator.</li>
+  </ul>
+</section>
+<section class="pane" id="p4" hidden>
   <p class="note">Recordings from <a href="https://freesound.org">Freesound.org</a>, licensed CC0 (public domain). Trimmed, converted to mono, loudness-matched and cross-faded into loops.</p>
   <ul class="refs">
     <li>Rain: &ldquo;<a href="https://freesound.org/people/samesamesame/sounds/242889/">Rain from Indoors - Perfect loop</a>&rdquo; by samesamesame</li>
@@ -108,20 +132,7 @@ try {
     <li>Singing bowl: &ldquo;<a href="https://freesound.org/people/steffcaffrey/sounds/449950/">Singing Bowl singing</a>&rdquo; by steffcaffrey</li>
     <li>People talking: &ldquo;<a href="https://freesound.org/people/moxobna/sounds/46310/">0105coffeehouse</a>&rdquo; by moxobna</li>
   </ul>
-  <h2 class="lbl">References</h2>
-  <ul class="refs">
-    <li>Minnaert, M. (1933). On musical air-bubbles and the sounds of running water. <i>Phil. Mag.</i> 16.</li>
-    <li>Prosperetti, A. &amp; Oguz, H. (1993). The impact of drops on liquid surfaces and the underwater noise of rain. <i>Annu. Rev. Fluid Mech.</i> 25.</li>
-    <li>Marshall, J. &amp; Palmer, W. (1948). The distribution of raindrops with size. <i>J. Meteorology</i> 5.</li>
-    <li>Sethna, J., Dahmen, K. &amp; Myers, C. (2001). Crackling noise. <i>Nature</i> 410.</li>
-    <li>Voss, R. &amp; Clarke, J. (1975). 1/f noise in music and speech. <i>Nature</i> 258.</li>
-    <li>Dolbear, A. (1897). The cricket as a thermometer. <i>American Naturalist</i> 31.</li>
-    <li>Söderlund, G. et al. (2007). Listening to noise improves cognitive performance in children with ADHD. <i>J. Child Psychol. Psychiatry</i> 48.</li>
-    <li>Zhou, J. et al. (2012). Pink noise: effect on complexity synchronization of brain activity and sleep consolidation. <i>J. Theor. Biol.</i> 306.</li>
-    <li>Garcia-Argibay, M. et al. (2019). Efficacy of binaural auditory beats in cognition, anxiety and pain perception: a meta-analysis. <i>Psychol. Res.</i> 83.</li>
-    <li>Kellet, P. Pink noise filter (musicdsp.org), used for the pink noise generator.</li>
-  </ul>
-
+  </section>
 <footer class="foot">
   <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
   <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>

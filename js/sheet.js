@@ -23,3 +23,18 @@
   d.addEventListener('keydown', function (e) { if (e.keyCode === 27 && !sheet.hidden) close(); });
   if (w.location.hash === '#faq') open();
 })(window, document);
+(function (d) {
+  var tabs = d.getElementById('tabs'), btn = tabs.getElementsByTagName('button'), i;
+  function show(n) {
+    for (var k = 0; k < btn.length; k++) {
+      btn[k].setAttribute('aria-selected', k === n ? 'true' : 'false');
+      d.getElementById('p' + k).hidden = k !== n;
+    }
+  }
+  tabs.addEventListener('click', function (e) { var t = e.target.getAttribute('data-t'); if (t !== null) show(+t); });
+  d.addEventListener('toggle', function (e) {
+    var el = e.target, all = el.parentNode.getElementsByTagName('details');
+    if (!el.open) return;
+    for (i = 0; i < all.length; i++) if (all[i] !== el) all[i].open = false;
+  }, true);
+})(document);
