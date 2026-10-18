@@ -1,5 +1,5 @@
 /* Cache-first service worker so the app loads instantly and works offline. */
-var CACHE = 'noisespace-v6';
+var CACHE = 'noisespace-v7';
 var FILES = [
   './', 'index.html', 'logo.svg', 'favicon.ico', 'fonts/patrick-hand.woff2', 'img/logo.png', 'img/favicon-32.png', 'img/icon-192.png', 'img/apple-touch-icon.png', 'manifest.json',
   'css/base.css', 'css/layout.css', 'css/aero.css',
