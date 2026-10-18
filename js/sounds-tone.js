@@ -3,7 +3,7 @@
   var NS = w.NS = w.NS || {}, S = NS.sounds = NS.sounds || [];
 
   S.push(
-    { id: 'bowl', name: 'Singing bowl', desc: 'Inharmonic overtones', vol: 0.4, build: function (H, o) {
+    { id: 'bowl', name: 'Singing bowl', desc: 'Inharmonic overtones', vol: 0.4, file: 'audio/bowl.mp3', build: function (H, o) {
       var c = H.ctx(), timer, notes = [196, 220, 261.6, 293.7, 329.6];
       var ratio = [1, 2.71, 5.15, 8.46], amp = [0.5, 0.3, 0.15, 0.08];
       (function strike() {

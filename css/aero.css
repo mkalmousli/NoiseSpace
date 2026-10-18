@@ -78,3 +78,6 @@ select option { color: #1d3b44; }
 .upd { position: fixed; left: 50%; top: 10px; z-index: 9; transform: translateX(-50%); padding: 8px 8px 8px 16px; border-radius: 999px; background: var(--glass-hi); border: 1px solid var(--edge); box-shadow: 0 6px 18px var(--shadow); font-size: .9rem; white-space: nowrap; }
 .upd[hidden] { display: none; }
 .upd button { margin-left: 8px; padding: 4px 14px; border-radius: 999px; background: var(--acc); color: #fff; font-weight: 400; }
+.card.load .tog { opacity: .75; }
+.card.load .st { font-size: 0; }
+.card.load .st::after { content: "loading"; font-size: .9rem; }

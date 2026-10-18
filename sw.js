@@ -1,9 +1,9 @@
 /* Cache-first service worker so the app loads instantly and works offline. */
-var CACHE = 'noisespace-v8';
+var CACHE = 'noisespace-v9';
 var FILES = [
   './', 'index.html', 'logo.svg', 'favicon.ico', 'fonts/patrick-hand.woff2', 'img/logo.png', 'img/favicon-32.png', 'img/icon-192.png', 'img/apple-touch-icon.png', 'manifest.json',
   'css/base.css', 'css/layout.css', 'css/aero.css',
-  'js/store.js', 'js/icons.js', 'js/noise.js', 'js/drops.js', 'js/waves.js', 'js/helpers.js',
+  'js/store.js', 'js/icons.js', 'js/noise.js', 'js/drops.js', 'js/waves.js', 'js/helpers.js', 'js/samples.js',
   'js/sounds-nature.js', 'js/sounds-tone.js', 'js/voices.js', 'js/catalog.js', 'js/engine.js', 'js/ui.js', 'js/app.js', 'js/update.js'
 ];
 

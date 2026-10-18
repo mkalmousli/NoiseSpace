@@ -3,13 +3,13 @@
   var $ = w.NS.$;
   /* Register the worker; when a new version is waiting, offer an Update button, then reload. */
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-    var reloaded = false;
+    var reloaded = false, had = !!navigator.serviceWorker.controller;
     var offer = function (sw) {
       $('upd').hidden = false;
       $('updgo').onclick = function () { sw.postMessage('skip'); };
     };
     navigator.serviceWorker.addEventListener('controllerchange', function () {
-      if (!reloaded) { reloaded = true; location.reload(); }
+      if (had && !reloaded) { reloaded = true; location.reload(); }
     });
     w.addEventListener('load', function () { setTimeout(function () {
       navigator.serviceWorker.register('sw.js').then(function (reg) {

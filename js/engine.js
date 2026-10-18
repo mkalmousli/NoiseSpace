@@ -29,7 +29,8 @@
       var g = H.gain(0);
       g.connect(master);
       H.cur = [];
-      live[id] = { g: g, stop: NS.byId[id].build(H, g) };
+      var s = NS.byId[id];
+      live[id] = { g: g, stop: s.file ? H.play(s, g) : s.build(H, g) };
       live[id].srcs = H.cur;
       ramp(g.gain, NS.volume(id), 0.3);
     } else if (!on && h) {

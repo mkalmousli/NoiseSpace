@@ -20,10 +20,11 @@
 
 ## Features
 
-- **13 sounds, all synthesized live in your browser** from physical models (no audio files):
-  rain and stream (Minnaert bubble resonances, Marshall-Palmer drop sizes), ocean (swell/crash/foam),
-  wind, fireplace (power-law crackle), crickets (Dolbear), singing bowl (inharmonic modes),
-  people talking (formant-synthesized café murmur), white / pink / brown noise, 10 Hz binaural focus tone and a space drone.
+- **13 sounds**: 8 real CC0 field recordings from [Freesound](https://freesound.org) (rain, ocean, wind,
+  stream, fireplace, crickets, singing bowl, people talking; credited below and on the site) plus
+  white / pink / brown noise, a 10 Hz binaural focus tone and a space drone synthesized live with the
+  Web Audio API. Recordings load on first use (about 300 KB each) and are cached for offline use;
+  if one cannot load, a synthesized physical model of that sound plays instead.
   See the [FAQ](https://mkalmousli.github.io/NoiseSpace/#faq) for the science and references.
 - **Layer and mix** any sounds with per-sound volume and a master fader.
 - **Presets**: Deep focus, Study, Relax, Sleep, Cozy, Forest, Night.
@@ -65,3 +66,10 @@ MIT
 By [al-mo.de](https://al-mo.de). MIT licensed.
 
 Font: [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand) (SIL OFL), self-hosted.
+
+## Sound credits (all CC0 via Freesound.org)
+
+Rain: samesamesame (#242889) · Ocean: derjuli (#535069) · Wind: haniebal (#423314) ·
+Stream: s-light (#514683) · Fireplace: BonnyOrbit (#484338) · Crickets: Defelozedd94 (#522299) ·
+Singing bowl: steffcaffrey (#449950) · People talking: moxobna (#46310).
+Trimmed, mono, loudness-matched and cross-faded into loops.

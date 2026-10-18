@@ -43,7 +43,7 @@
       id = NS.sounds[i].id;
       on = NS.isOn(id);
       li = NS.$('c-' + id);
-      li.className = on ? 'card on' : 'card';
+      li.className = on ? (NS.busy[id] ? 'card on load' : 'card on') : 'card';
       li.firstChild.setAttribute('aria-pressed', on ? 'true' : 'false');
     }
     NS.$('play').innerHTML = NS.icon(n ? 'stop' : 'play');

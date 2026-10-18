@@ -53,7 +53,7 @@
     NS.norm(d, 0.6);
   } };
 
-  S.push({ id: 'talk', name: 'People talking', desc: 'Distant café murmur', vol: 0.4, build: function (H, o) {
+  S.push({ id: 'talk', name: 'People talking', desc: 'Distant café murmur', vol: 0.4, file: 'audio/talk.mp3', build: function (H, o) {
     var f = H.filt('lowpass', 3800, 0.5), g = H.gain(0.7), s;
     f.connect(o); H.noise('talk').connect(f);
     s = H.noise('talk'); s.playbackRate.value = 0.84; s.connect(g); g.connect(f);
