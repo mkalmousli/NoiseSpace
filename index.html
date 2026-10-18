@@ -11,6 +11,7 @@
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
+<link rel="author" href="https://al-mo.de">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NoiseSpace">
 <meta property="og:title" content="NoiseSpace – Focus, Study &amp; Relaxation Sounds">
@@ -23,7 +24,8 @@
 "url":"https://mkalmousli.github.io/NoiseSpace/","applicationCategory":"MultimediaApplication",
 "operatingSystem":"Any","browserRequirements":"Requires Web Audio API",
 "description":"Free ambient sound mixer for focus, study and relaxation.",
-"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+"author":{"@type":"Person","url":"https://al-mo.de"},"codeRepository":"https://github.com/mkalmousli/NoiseSpace"}
 </script>
 <script>
 try {
@@ -41,7 +43,8 @@ try {
 
 <header class="wrap top">
   <a class="brand" href="./"><img src="logo.svg" width="40" height="40" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
-  <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button>
+  <nav class="nav" aria-label="Site"><a href="faq.html">FAQ</a><a href="https://github.com/mkalmousli/NoiseSpace">Source</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
+  <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button></nav>
 </header>
 
 <main class="wrap">
@@ -60,14 +63,6 @@ try {
     <ul id="grid" class="grid"></ul>
     <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
   </section>
-
-  <section class="about" aria-labelledby="ab">
-    <h2 id="ab" class="lbl">Why ambient sound?</h2>
-    <p><strong>White, pink and brown noise</strong> mask distracting background chatter so you can concentrate.
-      <strong>Rain, ocean and fireplace</strong> sounds ease stress and help you wind down for sleep.
-      The <strong>10&nbsp;Hz focus tone</strong> is a binaural beat &ndash; use headphones.</p>
-    <p>Everything is generated live in your browser with the Web Audio API: no downloads, no tracking.</p>
-  </section>
 </main>
 
 <div class="dock" role="region" aria-label="Playback controls">
@@ -85,16 +80,15 @@ try {
 </div>
 
 <footer class="wrap foot">
-  <a href="https://github.com/mkalmousli/NoiseSpace">Open source on GitHub</a> &middot; Made for calm minds
+  <a href="faq.html">FAQ &amp; science</a> &middot; <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
+  <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>
+  Made by <a href="https://al-mo.de" rel="author">al-mo.de</a> &middot; MIT licensed
 </footer>
 
-<script src="js/store.js"></script>
-<script src="js/icons.js"></script>
-<script src="js/sounds.js"></script>
-<script src="js/noise.js"></script>
-<script src="js/helpers.js"></script>
-<script src="js/engine.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/app.js"></script>
+<script defer src="js/store.js"></script><script defer src="js/icons.js"></script>
+<script defer src="js/noise.js"></script><script defer src="js/drops.js"></script><script defer src="js/waves.js"></script>
+<script defer src="js/sounds-nature.js"></script><script defer src="js/sounds-tone.js"></script>
+<script defer src="js/catalog.js"></script><script defer src="js/helpers.js"></script>
+<script defer src="js/engine.js"></script><script defer src="js/ui.js"></script><script defer src="js/app.js"></script>
 </body>
 </html>

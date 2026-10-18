@@ -82,6 +82,6 @@
   });
 
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-    w.addEventListener('load', function () { navigator.serviceWorker.register('sw.js'); });
+    w.addEventListener('load', function () { setTimeout(function () { navigator.serviceWorker.register('sw.js'); }, 2000); });
   }
 })(window, document);

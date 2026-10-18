@@ -40,14 +40,11 @@ button { cursor: pointer; border: 0; background: none; }
 .sky i {
   position: absolute; border-radius: 50%; background: var(--bubble);
   box-shadow: inset 0 0 24px rgba(255, 255, 255, .5);
-  animation: drift 26s ease-in-out infinite alternate;
 }
 .sky i:nth-child(1) { width: 220px; height: 220px; left: 6%; top: 10%; }
-.sky i:nth-child(2) { width: 120px; height: 120px; right: 12%; top: 22%; animation-delay: -8s; }
-.sky i:nth-child(3) { width: 300px; height: 300px; right: -60px; bottom: 18%; animation-delay: -14s; }
-.sky i:nth-child(4) { width: 70px; height: 70px; left: 30%; bottom: 30%; animation-delay: -4s; }
+.sky i:nth-child(2) { width: 120px; height: 120px; right: 12%; top: 22%; }
+.sky i:nth-child(3) { width: 300px; height: 300px; right: -60px; bottom: 18%; }
 
-@keyframes drift { to { transform: translate3d(24px, -40px, 0); } }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

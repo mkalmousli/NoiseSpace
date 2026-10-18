@@ -46,3 +46,8 @@
 @media (max-width: 360px) {
   .sleep span { display: none; }
 }
+
+.nav { display: flex; align-items: center; gap: 14px; font-size: .9rem; }
+.nav a, .foot a { text-decoration: none; }
+.nav a:hover, .foot a:hover { text-decoration: underline; }
+@media (max-width: 440px) { .nav a:nth-child(2) { display: none; } }

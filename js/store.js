@@ -12,8 +12,12 @@
     }
   } catch (e) {}
 
+  var wait;
   NS.save = function () {
-    try { w.localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
+    clearTimeout(wait);
+    wait = setTimeout(function () {
+      try { w.localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
+    }, 300);
   };
 
   NS.volume = function (id) {

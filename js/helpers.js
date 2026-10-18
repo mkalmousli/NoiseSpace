@@ -11,7 +11,7 @@
     noise: function (kind) {
       var s = H.c.createBufferSource();
       s.buffer = H.buf(kind); s.loop = true;
-      s.start(0, Math.random() * 4);
+      s.start(0, Math.random() * s.buffer.duration);
       H.cur.push(s);
       return s;
     },
@@ -26,6 +26,11 @@
       return n;
     },
     gain: function (v) { var g = H.c.createGain(); g.gain.value = v; return g; },
+    chain: function (kind, type, f, q, level, out) {
+      var n = H.filt(type, f, q), g = H.gain(level);
+      H.noise(kind).connect(n); n.connect(g); g.connect(out);
+      return g;
+    },
     lfo: function (rate, depth, param) {
       var o = H.osc('sine', rate), g = H.gain(depth);
       o.connect(g); g.connect(param);
