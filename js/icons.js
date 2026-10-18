@@ -18,7 +18,8 @@
     play: 'M8 5l11 7-11 7z',
     stop: 'M7 6h3v12H7zM14 6h3v12h-3z',
     sun: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5',
-    moon: 'M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10z'
+    moon: 'M20 14A8 8 0 0 1 10 4a8 8 0 1 0 10 10z',
+    info: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 11v5M12 8h.01'
   };
   NS.icon = function (id) {
     return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + NS.icons[id] + '"/></svg>';

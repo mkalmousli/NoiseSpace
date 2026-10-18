@@ -57,7 +57,7 @@ try {
 <div class="app">
 <header class="top">
   <a class="brand" href="./"><img src="img/logo.png" width="32" height="32" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
-  <nav class="nav" aria-label="Site"><a href="#faq">FAQ</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
+  <nav class="nav" aria-label="Site"><button id="info" class="gbtn" type="button" aria-label="About, FAQ and credits" aria-haspopup="dialog"></button>
   <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button></nav>
 </header>
 <main>
@@ -82,8 +82,11 @@ try {
 </div>
 
 </div>
-<section id="faq" class="wrap faqs">
-  <h2 class="lbl">FAQ &amp; science</h2>
+<div id="back" class="back" hidden></div>
+<div id="faq" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sh-t" hidden>
+<div class="grab"><button id="shx" class="gbtn" type="button" aria-label="Close">&times;</button></div>
+<div class="body">
+<h2 class="lbl" id="sh-t">FAQ &amp; science</h2>
   <details class="faq"><summary>Where do the sounds come from?</summary><p>Eight sounds (rain, ocean, wind, stream, fireplace, crickets, singing bowl and people talking) are real field recordings released under CC0 on Freesound.org, trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Credits are listed at the bottom of this page.</p></details>
   <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
   <details class="faq"><summary>Does noise really help me focus or sleep?</summary><p>Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works.</p></details>
@@ -118,16 +121,18 @@ try {
     <li>Garcia-Argibay, M. et al. (2019). Efficacy of binaural auditory beats in cognition, anxiety and pain perception: a meta-analysis. <i>Psychol. Res.</i> 83.</li>
     <li>Kellet, P. Pink noise filter (musicdsp.org), used for the pink noise generator.</li>
   </ul>
-</section>
-<footer class="wrap foot">
-  <a href="#faq">FAQ &amp; science</a> &middot; <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
+
+<footer class="foot">
+  <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
   <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>
   Made by <a href="https://al-mo.de" rel="author">al-mo.de</a> &middot; MIT licensed
 </footer>
+</div></div>
+
 <script defer src="js/store.js"></script><script defer src="js/icons.js"></script>
 <script defer src="js/noise.js"></script><script defer src="js/drops.js"></script><script defer src="js/waves.js"></script>
 <script defer src="js/sounds-nature.js"></script><script defer src="js/sounds-tone.js"></script>
 <script defer src="js/voices.js"></script><script defer src="js/catalog.js"></script><script defer src="js/helpers.js"></script><script defer src="js/samples.js"></script>
-<script defer src="js/engine.js"></script><script defer src="js/ui.js"></script><script defer src="js/app.js"></script><script defer src="js/update.js"></script>
+<script defer src="js/engine.js"></script><script defer src="js/ui.js"></script><script defer src="js/app.js"></script><script defer src="js/sheet.js"></script><script defer src="js/update.js"></script>
 </body>
 </html>

@@ -1,18 +1,18 @@
 /* Components: tiles, chips, sliders, dock controls. Flat and minimal. */
 .chip, .gbtn, select { background: var(--card); border: 1px solid var(--line); }
-.chip { padding: 3px 14px; border-radius: 999px; font-size: 1.1rem; }
+.chip { padding: 1px 12px; border-radius: 999px; font-size: 1rem; }
 .chip:active { background: var(--acc); color: var(--on); }
-.gbtn { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.gbtn { width: 36px; height: 36px; font-size: 1.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 .tog {
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-  width: 100%; height: 100%; padding: 6px 4px 20px; border-radius: 16px;
+  width: 100%; height: 100%; padding: 4px 2px 22px; border-radius: 14px;
   background: var(--card); border: 2px solid var(--line); transition: background .15s, border-color .15s;
 }
 .orb { display: block; color: hsl(var(--h) 45% 38%); }
-.orb svg { display: block; width: 30px; height: 30px; }
-.nm { font-size: 1.1rem; line-height: 1.1; text-align: center; }
+.orb svg { display: block; width: 24px; height: 24px; }
+.nm { font-size: 1rem; line-height: 1.1; text-align: center; }
 .ds, .st { display: none; }
 .card.on .tog { background: hsl(var(--h) 70% 91%); border-color: hsl(var(--h) 55% 42%); }
 .card.on .orb, .card.on .nm { color: hsl(var(--h) 70% 20%); }
@@ -22,20 +22,20 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 .card.load .tog { opacity: .6; }
 
 .vol { -webkit-appearance: none; appearance: none; display: block; width: 100%; height: 26px; margin: 0; background: none; }
-.card .vol { position: absolute; left: 12px; right: 12px; bottom: 1px; width: auto; display: none; }
+.card .vol { position: absolute; left: 10px; right: 10px; bottom: 1px; height: 18px; width: auto; display: none; }
 .card.on .vol { display: block; }
 .vol::-webkit-slider-runnable-track { height: 5px; border-radius: 5px; background: var(--line); }
 .vol::-moz-range-track { height: 5px; border-radius: 5px; background: var(--line); }
 .vol::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -7.5px; border-radius: 50%; border: 0; background: var(--acc); }
 .vol::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; border: 0; background: var(--acc); }
 
-.play { flex: none; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; background: var(--acc); color: var(--on); }
-.play svg { width: 24px; height: 24px; fill: currentColor; stroke: none; }
+.play { flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: var(--acc); color: var(--on); }
+.play svg { width: 20px; height: 20px; fill: currentColor; stroke: none; }
 select { padding: 4px 8px; border-radius: 10px; font-size: 1rem; }
 select option { color: #1d343b; }
 
-.faq { margin-bottom: 10px; padding: 0 16px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 4px 14px rgba(0, 0, 0, .15); }
-.faq summary { padding: 14px 0; font-weight: 400; cursor: pointer; }
+.faq { margin-bottom: 8px; padding: 0 14px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
+.faq summary { padding: 10px 0; font-weight: 400; cursor: pointer; }
 .faq p { margin: 0 0 14px; color: var(--mute); }
 .refs { color: var(--mute); font-size: .9rem; padding-left: 20px; }
 .refs li { margin-bottom: 6px; list-style: disc; }
@@ -46,4 +46,5 @@ select option { color: #1d343b; }
 .card.load .st { font-size: 0; }
 .card.load .st::after { content: "loading"; font-size: .9rem; }
 .gbtn svg { width: 22px; height: 22px; }
-@media (max-height: 700px) { .orb svg { width: 24px; height: 24px; } .tog { padding: 3px 2px 14px; gap: 0; } .nm { font-size: 1rem; line-height: 1.2; } }
+.card .vol::-webkit-slider-thumb { width: 14px; height: 14px; margin-top: -4.5px; }
+.card .vol::-moz-range-thumb { width: 14px; height: 14px; }
