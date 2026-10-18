@@ -1,7 +1,7 @@
 /* Cache-first service worker so the app loads instantly and works offline. */
-var CACHE = 'noisespace-v3';
+var CACHE = 'noisespace-v4';
 var FILES = [
-  './', 'index.html', 'logo.svg', 'manifest.json',
+  './', 'index.html', 'logo.svg', 'img/icon-192.png', 'img/apple-touch-icon.png', 'manifest.json',
   'css/base.css', 'css/layout.css', 'css/aero.css',
   'js/store.js', 'js/icons.js', 'js/noise.js', 'js/drops.js', 'js/waves.js', 'js/helpers.js',
   'js/sounds-nature.js', 'js/sounds-tone.js', 'js/catalog.js', 'js/engine.js', 'js/ui.js', 'js/app.js'
