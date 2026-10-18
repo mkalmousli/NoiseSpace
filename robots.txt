@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mkalmousli.github.io/NoiseSpace/sitemap.xml
+Sitemap: https://mkalmousli.github.io/blanket-web/sitemap.xml

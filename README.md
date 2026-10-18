@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://mkalmousli.github.io/NoiseSpace/"><b>▶ Open the app</b></a>
+  <a href="https://mkalmousli.github.io/blanket-web/"><b>▶ Open the app</b></a>
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
   white / pink / brown noise, a 10 Hz binaural focus tone and a space drone synthesized live with the
   Web Audio API. Recordings load on first use (about 300 KB each) and are cached for offline use;
   if one cannot load, a synthesized physical model of that sound plays instead.
-  See the [FAQ](https://mkalmousli.github.io/NoiseSpace/#faq) for the science and references.
+  See the [FAQ](https://mkalmousli.github.io/blanket-web/#faq) for the science and references.
 - **Layer and mix** any sounds with per-sound volume and a master fader.
 - **Presets**: Deep focus, Study, Relax, Sleep, Cozy, Forest, Night.
 - **Sleep timer** with a gentle fade-out.
