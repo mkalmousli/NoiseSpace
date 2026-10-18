@@ -20,8 +20,8 @@
 
 ## Features
 
-- **13 sounds**: 8 real CC0 field recordings from [Freesound](https://freesound.org) (rain, ocean, wind,
-  stream, fireplace, crickets, singing bowl, people talking; credited below and on the site) plus
+- **17 sounds**: 12 real recordings (rain, storm, waves, wind, stream, fire, birds, summer night, boat,
+  train, city, coffee shop; the set used by [Blanket](https://github.com/rafaelmardojai/blanket), credited below and on the site) plus
   white / pink / brown noise, a 10 Hz binaural focus tone and a space drone synthesized live with the
   Web Audio API. Recordings load on first use (about 300 KB each) and are cached for offline use;
   if one cannot load, a synthesized physical model of that sound plays instead.
@@ -67,9 +67,10 @@ By [al-mo.de](https://al-mo.de). MIT licensed.
 
 Font: [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand) (SIL OFL), self-hosted.
 
-## Sound credits (all CC0 via Freesound.org)
+## Sound credits
 
-Rain: samesamesame (#242889) · Ocean: derjuli (#535069) · Wind: haniebal (#423314) ·
-Stream: s-light (#514683) · Fireplace: BonnyOrbit (#484338) · Crickets: Defelozedd94 (#522299) ·
-Singing bowl: steffcaffrey (#449950) · People talking: moxobna (#46310).
+Same sources and licences as [Blanket's list](https://github.com/rafaelmardojai/blanket/blob/master/SOUNDS_LICENSING.md):
+Rain: alex36917 (CC BY) · Storm: Digifish music (CC BY) · Waves: Luftrum (CC BY) · Wind: felix.blume (CC0) ·
+Stream: gluckose (CC0) · Fire: ezwa, SoundBible (PD) · Birds: kvgarlic (CC0) · Night: Lisa Redfern, SoundBible (PD) ·
+Boat: Falcet (CC0) · Train: SDLx (CC BY 3.0) · City: gezortenplotz (CC BY) · Coffee: stephan, SoundBible (PD).
 Trimmed, mono, loudness-matched and cross-faded into loops.
