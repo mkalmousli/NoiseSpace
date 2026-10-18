@@ -31,8 +31,9 @@ body.playing .play { animation: none; }
 /* Pixel cursors, no text selection, square scrollbars. */
 * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 input#tmin { -webkit-user-select: text; user-select: text; }
-html, body, button, .tog, .sheet { cursor: url(../img/cursor.png) 3 2, default; }
-button, a, summary, select, .tog, .vol, label { cursor: url(../img/cursor-link.png) 3 2, pointer; }
+* { cursor: url(../img/cursor.png) 0 0, default; }
+button, a, summary, select, .tog, .chip, .vol, label, [role=button] { cursor: url(../img/cursor-link.png) 10 0, pointer; }
+input#tmin { cursor: text; }
 * { scrollbar-width: thin; scrollbar-color: var(--acc) var(--card); }
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--card); border-left: 2px solid var(--line); }
