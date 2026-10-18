@@ -1,23 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Blanket Web logo">
   <defs>
-    <radialGradient id="b" cx="35%" cy="25%" r="85%">
-      <stop offset="0" stop-color="#bff3f0"/>
-      <stop offset=".45" stop-color="#4fb9c9"/>
-      <stop offset="1" stop-color="#1f7a93"/>
-    </radialGradient>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".85"/>
-      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
-      <stop offset="1" stop-color="#fff" stop-opacity=".1"/>
-    </linearGradient>
+    <clipPath id="c"><rect x="10" y="22" width="108" height="84"/></clipPath>
   </defs>
-  <circle cx="64" cy="64" r="60" fill="url(#b)"/>
-  <circle cx="64" cy="64" r="59" fill="none" stroke="url(#r)" stroke-width="2.5"/>
-  <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
-    <path d="M30 64v0M42 52v24M54 38v52M66 46v36M78 34v60M90 50v28M100 62v4" opacity=".95"/>
+  <rect width="128" height="128" fill="#d8e0c6"/>
+  <g stroke="#2f3a26" stroke-width="4" stroke-linecap="square">
+    <path d="M18 106v14M30 106v14M42 106v14M54 106v14M66 106v14M78 106v14M90 106v14M102 106v14M114 106v14" stroke="#e8eed8" stroke-width="5"/>
+    <path d="M18 106v14M30 106v14M42 106v14M54 106v14M66 106v14M78 106v14M90 106v14M102 106v14M114 106v14" stroke-width="1.5" stroke="#2f3a26" opacity=".5"/>
   </g>
-  <path d="M20 60C22 30 46 12 74 14c14 1 28 8 34 22-20-8-40-6-58 4-14 8-24 14-30 20z" fill="url(#g)"/>
+  <rect x="10" y="22" width="108" height="84" fill="#4f7a34"/>
+  <g clip-path="url(#c)">
+    <g fill="#8fc06a" opacity=".85"><rect x="10" y="34" width="108" height="10"/><rect x="10" y="70" width="108" height="10"/><rect x="10" y="94" width="108" height="6"/></g>
+    <g fill="#2f4a22" opacity=".8"><rect x="26" y="22" width="10" height="84"/><rect x="62" y="22" width="10" height="84"/><rect x="98" y="22" width="8" height="84"/></g>
+    <g fill="#e8eed8" opacity=".9"><rect x="10" y="55" width="108" height="3"/><rect x="45" y="22" width="3" height="84"/><rect x="81" y="22" width="3" height="84"/></g>
+  </g>
+  <path d="M10 22h108v84H10z" fill="none" stroke="#2f3a26" stroke-width="5"/>
+  <path d="M10 22h108l-14 16H24z" fill="#e8eed8" opacity=".3"/>
 </svg>

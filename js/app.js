@@ -4,11 +4,12 @@
   NS.timerEnd = function () { last = []; mark(-1); NS.sync(); };
 
   function mark(i) {
-    var b = $('presets').childNodes, k;
+    var b = $('presets').querySelectorAll('.chip'), k;
     cur = i;
     for (k = 0; k < b.length; k++) {
-      b[k].className = k === i ? 'chip sel' : 'chip';
-      b[k].setAttribute('aria-pressed', k === i ? 'true' : 'false');
+      var on = +b[k].getAttribute('data-p') === i;
+      b[k].className = on ? 'chip sel' : 'chip';
+      b[k].setAttribute('aria-pressed', on ? 'true' : 'false');
     }
   }
 
@@ -50,7 +51,7 @@
     $('theme').innerHTML = NS.icon(t === 'dark' ? 'sun' : 'moon');
     $('theme').setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
     var m = d.querySelector('meta[name=theme-color]');
-    if (m) m.setAttribute('content', t === 'dark' ? '#1e1c17' : '#e4d9bf');
+    if (m) m.setAttribute('content', t === 'dark' ? '#161b15' : '#d8e0c6');
   }
 
   var sync = NS.sync;

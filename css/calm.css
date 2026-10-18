@@ -1,10 +1,10 @@
 /* Calm ambient backdrop (only while sounds play), bigger play button, sheet tabs. */
-:root { --ring: rgba(156, 79, 46, .2); --b1: hsla(30, 45%, 55%, .10); --b2: hsla(40, 50%, 60%, .07); --b3: transparent; }
-[data-theme="dark"] { --ring: rgba(210, 154, 72, .2); --b1: hsla(30, 45%, 45%, .13); --b2: hsla(40, 50%, 50%, .06); --b3: transparent; }
-/* Nostalgic CRT glow: a dim warm vignette and one slow, stepped scanline roll, only while playing. */
-body::before, body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 4s steps(8); }
+:root { --ring: rgba(79, 122, 52, .22); --b1: hsla(110, 45%, 45%, .13); --b2: hsla(120, 50%, 45%, .10); --b3: transparent; }
+[data-theme="dark"] { --ring: rgba(143, 192, 106, .22); --b1: hsla(120, 45%, 40%, .16); --b2: hsla(125, 55%, 45%, .09); --b3: transparent; }
+/* Nostalgic CRT glow: a dim warm vignette and one smooth scanline roll, only while playing. */
+body::before, body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 1.5s ease; }
 body::before { inset: 0; background: radial-gradient(ellipse at 50% 45%, var(--b1), transparent 70%); }
-body::after { left: 0; right: 0; top: 0; height: 28vh; background: linear-gradient(transparent, var(--b2), transparent); animation: roll 24s steps(80) infinite; animation-play-state: paused; }
+body::after { left: 0; right: 0; top: 0; height: 28vh; background: linear-gradient(transparent, var(--b2), transparent); will-change: transform; animation: roll 7s linear infinite; animation-play-state: paused; }
 body.playing::before { opacity: 1; }
 body.playing::after { opacity: 1; animation-play-state: running; }
 @keyframes roll { from { transform: translateY(-30vh); } to { transform: translateY(105vh); } }

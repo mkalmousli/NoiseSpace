@@ -1,6 +1,6 @@
 /* Old-school skin: square corners, hard ink borders and offset shadows, muted paper colors. */
 * { border-radius: 0 !important; }
-body { background-image: repeating-linear-gradient(0deg, rgba(60, 40, 10, .035) 0 1px, transparent 1px 3px); }
+body { background-image: repeating-linear-gradient(0deg, rgba(30, 60, 10, .04) 0 1px, transparent 1px 3px); }
 .chip, .gbtn, .sleep, .tabs, .pop, .dock, .tog, .faq, select, .sheet { border: 2px solid var(--line); }
 .chip, .gbtn, .sleep, .tog { box-shadow: 2px 2px 0 var(--line); }
 .chip:active, .gbtn:active, .sleep:active, .tog:active { transform: translate(2px, 2px); box-shadow: none; }
@@ -28,3 +28,13 @@ body.playing .play { animation: none; }
 .upd { border-width: 2px; box-shadow: 3px 3px 0 var(--line); }
 .step input { border-bottom: 2px solid var(--line); }
 .tabs { position: sticky; top: 0; z-index: 1; background: var(--card); }
+/* Pixel cursors, no text selection, square scrollbars. */
+* { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+input#tmin { -webkit-user-select: text; user-select: text; }
+html, body, button, .tog, .sheet { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' shape-rendering='crispEdges'%3E%3Cpath d='M3 2h3v2h2v2h2v2h2v2h2v2h-5v2h2v4h-3v-4h-2v-2h-2v2h-2z' fill='%23232b1c' stroke='%23e8eed8' stroke-width='1'/%3E%3C/svg%3E") 3 2, default; }
+button, a, summary, select, .tog, .vol, label { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' shape-rendering='crispEdges'%3E%3Cpath d='M9 2h3v8h2V8h3v2h2v2h2v7h-2v2h-9v-2h-2v-2h-2v-2h2v-2h2z' fill='%23e8eed8' stroke='%23232b1c' stroke-width='1.5'/%3E%3C/svg%3E") 9 2, pointer; }
+* { scrollbar-width: thin; scrollbar-color: var(--acc) var(--card); }
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--card); border-left: 2px solid var(--line); }
+::-webkit-scrollbar-thumb { background: var(--acc); border: 2px solid var(--line); }
+::-webkit-scrollbar-thumb:hover { background: var(--ink); }
