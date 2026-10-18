@@ -81,7 +81,4 @@
     NS.save();
   });
 
-  if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-    w.addEventListener('load', function () { setTimeout(function () { navigator.serviceWorker.register('sw.js'); }, 2000); });
-  }
 })(window, document);

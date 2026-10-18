@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" width="120" alt="NoiseSpace logo">
+  <img src="img/logo.png" width="120" alt="NoiseSpace logo">
 </p>
 
 <h1 align="center">NoiseSpace</h1>
