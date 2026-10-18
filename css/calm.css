@@ -24,7 +24,7 @@ body.playing .play { animation: breathe 6s ease-in-out infinite; }
 .sheet .grab { position: absolute; top: 6px; right: 8px; padding: 0; }
 .sheet .body { padding-top: 50px; }
 
-.brand { cursor: default; user-select: none; }
+.brand { user-select: none; }
 .sleep { padding: 6px 12px; border-radius: 12px; font-size: 1rem; line-height: 1; background: var(--card); border: 1px solid var(--line); color: var(--mute); min-width: 64px; }
 .sleep.on { color: var(--on); background: var(--acc); border-color: var(--acc); }
 .dock { position: relative; }

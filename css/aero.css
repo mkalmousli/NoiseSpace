@@ -35,7 +35,7 @@ select { padding: 4px 8px; border-radius: 10px; font-size: 1rem; }
 select option { color: #1d343b; }
 
 .faq { margin-bottom: 8px; padding: 0 14px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); }
-.faq summary { padding: 10px 0; font-weight: 400; cursor: pointer; }
+.faq summary { padding: 10px 0; font-weight: 400; }
 .faq p { margin: 0 0 14px; color: var(--mute); }
 .refs { color: var(--mute); font-size: .9rem; padding-left: 20px; }
 .refs li { margin-bottom: 6px; list-style: disc; }
