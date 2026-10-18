@@ -41,3 +41,15 @@ body.playing .play { animation: breathe 6s ease-in-out infinite; }
 .step input::-webkit-outer-spin-button, .step input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .chip.go { height: 48px; padding: 0 16px; font-size: 1.4rem; background: var(--acc); color: var(--on); }
 #toff { height: 44px; font-size: 1.3rem; }
+/* Reference cards and noise-color chart. */
+.refs li.ref { display: flex; gap: 10px; margin: 0 0 8px; padding: 8px; list-style: none; background: var(--card); border: 2px solid var(--line); }
+.refs { padding: 0; }
+.yr { flex: none; align-self: flex-start; min-width: 46px; padding: 2px 4px; text-align: center; background: var(--acc); color: var(--on); font-weight: 400; }
+.ref .tt { display: block; color: var(--ink); line-height: 1.2; }
+.ref .au { display: block; margin-top: 2px; font-size: .85rem; }
+.ref .lk { display: flex; gap: 6px; margin-top: 6px; }
+.ref .lk a { padding: 0 8px; font-size: .85rem; color: var(--ink); text-decoration: none; border: 2px solid var(--line); box-shadow: 2px 2px 0 var(--line); }
+.ref .lk a:active { transform: translate(2px, 2px); box-shadow: none; }
+.sp { display: flex; align-items: flex-end; gap: 4px; height: 38px; margin-bottom: 8px; }
+.sp span { width: 52px; align-self: center; }
+.sp i { flex: 1; height: calc(var(--n) * 100%); background: var(--acc); border: 2px solid var(--line); }
