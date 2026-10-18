@@ -4,7 +4,8 @@ body { background-image: repeating-linear-gradient(0deg, rgba(60, 40, 10, .035) 
 .chip, .gbtn, .sleep, .tabs, .pop, .dock, .tog, .faq, select, .sheet { border: 2px solid var(--line); }
 .chip, .gbtn, .sleep, .tog { box-shadow: 2px 2px 0 var(--line); }
 .chip:active, .gbtn:active, .sleep:active, .tog:active { transform: translate(2px, 2px); box-shadow: none; }
-.chip.sel { background: var(--acc); color: var(--on); box-shadow: none; transform: translate(2px, 2px); }
+.chip.sel, .chip[aria-pressed="true"] { background: var(--acc); color: var(--on); box-shadow: inset 2px 2px 0 rgba(0, 0, 0, .4); transform: translate(2px, 2px); }
+.chip.sel::before { content: "\25B6\00a0"; font-size: .7em; }
 .dock, .pop { box-shadow: 4px 4px 0 var(--line); }
 .sheet { box-shadow: 0 -4px 0 var(--line); }
 @media (min-width: 700px) { .sheet { box-shadow: 5px 5px 0 var(--line); } }
@@ -26,3 +27,4 @@ body.playing .play { animation: none; }
 .brand img { filter: sepia(.35) saturate(.8); }
 .upd { border-width: 2px; box-shadow: 3px 3px 0 var(--line); }
 .step input { border-bottom: 2px solid var(--line); }
+.tabs { position: sticky; top: 0; z-index: 1; background: var(--card); }

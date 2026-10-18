@@ -53,6 +53,8 @@
     if (m) m.setAttribute('content', t === 'dark' ? '#1e1c17' : '#e4d9bf');
   }
 
+  var sync = NS.sync;
+  NS.sync = function () { sync(); if (!NS.count()) cur = -1; mark(cur); };
   NS.render();
   NS.sync();
   theme(d.documentElement.getAttribute('data-theme') || 'light');

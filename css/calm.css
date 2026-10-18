@@ -1,11 +1,13 @@
 /* Calm ambient backdrop (only while sounds play), bigger play button, sheet tabs. */
-:root { --ring: rgba(156, 79, 46, .2); --b1: hsla(28, 55%, 60%, .28); --b2: hsla(80, 30%, 55%, .22); --b3: hsla(200, 30%, 60%, .18); }
-[data-theme="dark"] { --ring: rgba(210, 154, 72, .2); --b1: hsla(28, 50%, 36%, .3); --b2: hsla(80, 25%, 30%, .25); --b3: hsla(200, 25%, 34%, .22); }
-body::before { content: ""; position: fixed; z-index: -1; inset: -25%; pointer-events: none; opacity: 0; transition: opacity 5s ease;
-  background: radial-gradient(circle at 25% 30%, var(--b1), transparent 42%), radial-gradient(circle at 75% 65%, var(--b2), transparent 42%), radial-gradient(circle at 55% 15%, var(--b3), transparent 38%);
-  will-change: transform; animation: drift 70s ease-in-out infinite alternate; animation-play-state: paused; }
-body.playing::before { opacity: 1; animation-play-state: running; }
-@keyframes drift { from { transform: translate3d(-4%, -3%, 0) rotate(0deg) scale(1); } to { transform: translate3d(4%, 3%, 0) rotate(14deg) scale(1.12); } }
+:root { --ring: rgba(156, 79, 46, .2); --b1: hsla(30, 45%, 55%, .10); --b2: hsla(40, 50%, 60%, .07); --b3: transparent; }
+[data-theme="dark"] { --ring: rgba(210, 154, 72, .2); --b1: hsla(30, 45%, 45%, .13); --b2: hsla(40, 50%, 50%, .06); --b3: transparent; }
+/* Nostalgic CRT glow: a dim warm vignette and one slow, stepped scanline roll, only while playing. */
+body::before, body::after { content: ""; position: fixed; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 4s steps(8); }
+body::before { inset: 0; background: radial-gradient(ellipse at 50% 45%, var(--b1), transparent 70%); }
+body::after { left: 0; right: 0; top: 0; height: 28vh; background: linear-gradient(transparent, var(--b2), transparent); animation: roll 24s steps(80) infinite; animation-play-state: paused; }
+body.playing::before { opacity: 1; }
+body.playing::after { opacity: 1; animation-play-state: running; }
+@keyframes roll { from { transform: translateY(-30vh); } to { transform: translateY(105vh); } }
 
 .play { box-shadow: 0 0 0 6px var(--ring); transition: transform .2s ease, box-shadow .6s ease; }
 .play:active { transform: scale(.94); }
@@ -26,15 +28,16 @@ body.playing .play { animation: breathe 6s ease-in-out infinite; }
 .sleep { padding: 6px 12px; border-radius: 12px; font-size: 1rem; line-height: 1; background: var(--card); border: 1px solid var(--line); color: var(--mute); min-width: 64px; }
 .sleep.on { color: var(--on); background: var(--acc); border-color: var(--acc); }
 .dock { position: relative; }
-.pop { position: absolute; z-index: 22; right: 0; bottom: calc(100% + 10px); width: min(300px, 100%); padding: 12px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0, 0, 0, .3); display: flex; flex-direction: column; gap: 10px; animation: rise .18s ease-out; }
-.pop[hidden] { display: none; }
+.pop { position: absolute; z-index: 22; right: 0; bottom: calc(100% + 12px); width: min(340px, 100%); padding: 12px; background: var(--card); border: 2px solid var(--line); display: flex; flex-direction: column; gap: 12px; animation: rise .18s ease-out; }
+.pop[hidden], #toff[hidden] { display: none; }
 @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
-.pop .chips { justify-content: space-between; }
-.pop .chip { flex: 1; }
-.step { display: flex; align-items: center; justify-content: space-between; }
-.step label { font-size: 1.3rem; color: var(--mute); }
-.step input { width: 4ch; padding: 2px 0; font-size: 1.6rem; text-align: center; color: var(--ink); background: none; border: 0; border-bottom: 2px solid var(--acc); -moz-appearance: textfield; }
+.grid6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.chip.big { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 62px; padding: 0; font-size: 1.9rem; line-height: 1; }
+.chip.big small { font-size: .85rem; color: var(--mute); }
+.step { display: flex; align-items: center; gap: 8px; }
+.step .gbtn { flex: none; width: 48px; height: 48px; font-size: 1.9rem; }
+.step label { flex: 1; text-align: center; font-size: 1.3rem; color: var(--mute); }
+.step input { width: 3.2ch; padding: 0; font-size: 2.2rem; text-align: center; color: var(--ink); background: none; border: 0; border-bottom: 2px solid var(--line); -moz-appearance: textfield; }
 .step input::-webkit-outer-spin-button, .step input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-.acts { display: flex; gap: 8px; }
-.acts .chip { flex: 1; padding: 5px 0; }
-.chip.go { background: var(--acc); color: var(--on); border-color: var(--acc); }
+.chip.go { height: 48px; padding: 0 16px; font-size: 1.4rem; background: var(--acc); color: var(--on); }
+#toff { height: 44px; font-size: 1.3rem; }

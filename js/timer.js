@@ -3,7 +3,7 @@
   var NS = w.NS, $ = NS.$, pop = $('tpop'), btn = $('sleepbtn'), inp = $('tmin'), endAt = 0, tick = 0;
 
   function clamp() { var v = Math.round(+inp.value) || 1; inp.value = Math.min(720, Math.max(1, v)); return +inp.value; }
-  function label(t) { $('left').firstChild.nodeValue = t; btn.className = t === 'Timer' ? 'sleep' : 'sleep on'; }
+  function label(t) { $('left').firstChild.nodeValue = t; btn.className = t === 'Timer' ? 'sleep' : 'sleep on'; $('toff').hidden = t === 'Timer'; }
   function close() { pop.hidden = true; }
 
   function show() {
