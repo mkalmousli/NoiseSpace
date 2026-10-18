@@ -1,0 +1,54 @@
+/* Theme tokens, reset, and the Frutiger Aero sky backdrop. */
+:root {
+  --bg1: #dff3f7; --bg2: #eef8e9; --ink: #1d3b44; --mute: #55747e;
+  --glass: rgba(255, 255, 255, .55); --glass-hi: rgba(255, 255, 255, .75);
+  --edge: rgba(255, 255, 255, .9); --shadow: rgba(40, 110, 130, .22);
+  --acc: #2f9db0; --acc2: #7fd6c2; --orb-a: #ffffff; --orb-b: #bfe9ef; --orb-c: #63c0d0;
+  --hill: rgba(150, 215, 170, .55); --bubble: rgba(255, 255, 255, .55);
+}
+[data-theme="dark"] {
+  --bg1: #0b1923; --bg2: #123238; --ink: #e2f2f4; --mute: #90b2ba;
+  --glass: rgba(40, 84, 98, .42); --glass-hi: rgba(80, 140, 156, .4);
+  --edge: rgba(160, 222, 232, .28); --shadow: rgba(0, 0, 0, .5);
+  --acc: #4fc3d2; --acc2: #3f9c88; --orb-a: #d6f6fa; --orb-b: #3e93a4; --orb-c: #134a5a;
+  --hill: rgba(40, 110, 100, .45); --bubble: rgba(140, 220, 235, .16);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; min-height: 100vh; padding-bottom: 130px;
+  color: var(--ink); background: var(--bg1);
+  background: linear-gradient(180deg, var(--bg1), var(--bg2)) fixed;
+  font: 16px/1.5 "Segoe UI", "Trebuchet MS", Tahoma, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, p, ul { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: var(--acc); }
+button, select, input { font: inherit; color: inherit; }
+button { cursor: pointer; border: 0; background: none; }
+:focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
+
+.sky { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; overflow: hidden; }
+.sky::after {
+  content: ""; position: absolute; left: -25%; bottom: -22vh; width: 150%; height: 46vh;
+  border-radius: 50% 50% 0 0; background: linear-gradient(180deg, var(--hill), transparent);
+}
+.sky i {
+  position: absolute; border-radius: 50%; background: var(--bubble);
+  box-shadow: inset 0 0 24px rgba(255, 255, 255, .5);
+  animation: drift 26s ease-in-out infinite alternate;
+}
+.sky i:nth-child(1) { width: 220px; height: 220px; left: 6%; top: 10%; }
+.sky i:nth-child(2) { width: 120px; height: 120px; right: 12%; top: 22%; animation-delay: -8s; }
+.sky i:nth-child(3) { width: 300px; height: 300px; right: -60px; bottom: 18%; animation-delay: -14s; }
+.sky i:nth-child(4) { width: 70px; height: 70px; left: 30%; bottom: 30%; animation-delay: -4s; }
+
+@keyframes drift { to { transform: translate3d(24px, -40px, 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

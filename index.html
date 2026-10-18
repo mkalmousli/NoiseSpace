@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NoiseSpace – Free Focus, Study &amp; Relaxation Sounds</title>
+<meta name="description" content="Mix rain, ocean, fireplace, wind and white, pink or brown noise for focus, study, work and sleep. Free, fast, offline-ready and ad-free.">
+<meta name="theme-color" content="#e6f6f8">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://mkalmousli.github.io/NoiseSpace/">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NoiseSpace">
+<meta property="og:title" content="NoiseSpace – Focus, Study &amp; Relaxation Sounds">
+<meta property="og:description" content="Mix rain, ocean, fire, wind and noise colors. Free, fast and beautiful.">
+<meta property="og:url" content="https://mkalmousli.github.io/NoiseSpace/">
+<meta property="og:image" content="https://mkalmousli.github.io/NoiseSpace/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"NoiseSpace",
+"url":"https://mkalmousli.github.io/NoiseSpace/","applicationCategory":"MultimediaApplication",
+"operatingSystem":"Any","browserRequirements":"Requires Web Audio API",
+"description":"Free ambient sound mixer for focus, study and relaxation.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+<script>
+try {
+  var s = JSON.parse(localStorage.getItem('noisespace.v1')), t = s && s.theme;
+  if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+} catch (e) {}
+</script>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/aero.css">
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+<header class="wrap top">
+  <a class="brand" href="./"><img src="logo.svg" width="40" height="40" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
+  <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Sounds for focus, study &amp; calm</h1>
+    <p>Layer rain, ocean, fire and noise colors into your own perfect mix. Free, ad-free, works offline.</p>
+  </section>
+
+  <section aria-labelledby="ph">
+    <h2 id="ph" class="lbl">Presets</h2>
+    <div id="presets" class="chips"></div>
+  </section>
+
+  <section aria-labelledby="mx">
+    <h2 id="mx" class="lbl">Mixer</h2>
+    <ul id="grid" class="grid"></ul>
+    <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
+  </section>
+
+  <section class="about" aria-labelledby="ab">
+    <h2 id="ab" class="lbl">Why ambient sound?</h2>
+    <p><strong>White, pink and brown noise</strong> mask distracting background chatter so you can concentrate.
+      <strong>Rain, ocean and fireplace</strong> sounds ease stress and help you wind down for sleep.
+      The <strong>10&nbsp;Hz focus tone</strong> is a binaural beat &ndash; use headphones.</p>
+    <p>Everything is generated live in your browser with the Web Audio API: no downloads, no tracking.</p>
+  </section>
+</main>
+
+<div class="dock" role="region" aria-label="Playback controls">
+  <button id="play" class="play" type="button" aria-label="Play"></button>
+  <div class="mid">
+    <span id="status" class="status">&nbsp;</span>
+    <input id="master" class="vol" type="range" min="0" max="100" value="80" aria-label="Master volume">
+  </div>
+  <label class="sleep"><span id="left">&nbsp;</span>
+    <select id="sleep" aria-label="Sleep timer">
+      <option value="0">Timer off</option><option value="15">15 min</option><option value="30">30 min</option>
+      <option value="60">1 hour</option><option value="90">90 min</option><option value="120">2 hours</option>
+    </select>
+  </label>
+</div>
+
+<footer class="wrap foot">
+  <a href="https://github.com/mkalmousli/NoiseSpace">Open source on GitHub</a> &middot; Made for calm minds
+</footer>
+
+<script src="js/store.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/sounds.js"></script>
+<script src="js/noise.js"></script>
+<script src="js/helpers.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

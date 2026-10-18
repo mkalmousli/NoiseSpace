@@ -1,0 +1,16 @@
+{
+  "name": "NoiseSpace – Focus, Study & Relaxation Sounds",
+  "short_name": "NoiseSpace",
+  "description": "Mix rain, ocean, fire, wind and white, pink or brown noise for focus, study and sleep.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e6f6f8",
+  "theme_color": "#35a3b5",
+  "categories": ["productivity", "health", "music"],
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "logo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

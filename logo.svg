@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="NoiseSpace logo">
+  <defs>
+    <radialGradient id="b" cx="35%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#bff3f0"/>
+      <stop offset=".45" stop-color="#4fb9c9"/>
+      <stop offset="1" stop-color="#1f7a93"/>
+    </radialGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".1"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="60" fill="url(#b)"/>
+  <circle cx="64" cy="64" r="59" fill="none" stroke="url(#r)" stroke-width="2.5"/>
+  <g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round">
+    <path d="M30 64v0M42 52v24M54 38v52M66 46v36M78 34v60M90 50v28M100 62v4" opacity=".95"/>
+  </g>
+  <path d="M20 60C22 30 46 12 74 14c14 1 28 8 34 22-20-8-40-6-58 4-14 8-24 14-30 20z" fill="url(#g)"/>
+</svg>
