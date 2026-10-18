@@ -24,7 +24,7 @@
   rain and stream (Minnaert bubble resonances, Marshall-Palmer drop sizes), ocean (swell/crash/foam),
   wind, fireplace (power-law crackle), crickets (Dolbear), singing bowl (inharmonic modes),
   white / pink / brown noise, 10 Hz binaural focus tone and a space drone.
-  See the [FAQ](https://mkalmousli.github.io/NoiseSpace/faq.html) for the science and references.
+  See the [FAQ](https://mkalmousli.github.io/NoiseSpace/#faq) for the science and references.
 - **Layer and mix** any sounds with per-sound volume and a master fader.
 - **Presets**: Deep focus, Study, Relax, Sleep, Cozy, Forest, Night.
 - **Sleep timer** with a gentle fade-out.

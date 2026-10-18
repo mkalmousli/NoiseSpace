@@ -37,13 +37,25 @@ try {
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/aero.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Where do the sounds come from?","acceptedAnswer":{"@type":"Answer","text":"Nothing is recorded or downloaded. Every sound is synthesized live in your browser from simple physical models (Web Audio API), so the whole app is tiny, private and works offline."}},
+{"@type":"Question","name":"What is the difference between white, pink and brown noise?","acceptedAnswer":{"@type":"Answer","text":"They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble)."}},
+{"@type":"Question","name":"Does noise really help me focus or sleep?","acceptedAnswer":{"@type":"Answer","text":"Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works."}},
+{"@type":"Question","name":"How is rain generated?","acceptedAnswer":{"@type":"Answer","text":"Each raindrop makes an air bubble that rings at its Minnaert resonance, about 3.26 / R hertz for a bubble of radius R metres. Drops land at random (Poisson) times with an exponential size spread, as in real rain."}},
+{"@type":"Question","name":"What about fire, stream, ocean and crickets?","acceptedAnswer":{"@type":"Answer","text":"Fire is a low roar plus random crackles whose sizes follow a heavy-tailed power law, like other crackling-noise systems. Streams are many rising-pitch bubbles. Ocean is a swell, crash and foam cycle of about 10 seconds. Crickets chirp in 3-pulse trains near 4.5 kHz."}},
+{"@type":"Question","name":"What is the focus tone? Do I need headphones?","acceptedAnswer":{"@type":"Answer","text":"It plays 200 Hz in one ear and 210 Hz in the other, so your brain perceives a 10 Hz (alpha range) binaural beat. Headphones are required. A 2019 meta-analysis found small benefits for attention and anxiety, but the effect is not guaranteed."}},
+{"@type":"Question","name":"Why can't I hear anything on my phone?","acceptedAnswer":{"@type":"Answer","text":"Tap a sound or the play button first, because browsers block audio until you interact. Then check the volume, the silent switch and that the tab is not muted."}},
+{"@type":"Question","name":"Is it private? Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are no accounts, cookies or trackers. Volumes and theme are stored only on your device, and after the first visit the app works without internet."}},
+{"@type":"Question","name":"Can I contribute or report a bug?","acceptedAnswer":{"@type":"Answer","text":"Yes! NoiseSpace is open source under the MIT license. Source code, issues and ideas live on GitHub: github.com/mkalmousli/NoiseSpace."}}]}
+</script>
 </head>
 <body>
 <div class="sky" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
 <header class="wrap top">
   <a class="brand" href="./"><img src="logo.svg" width="40" height="40" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
-  <nav class="nav" aria-label="Site"><a href="faq.html">FAQ</a><a href="https://github.com/mkalmousli/NoiseSpace">Source</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
+  <nav class="nav" aria-label="Site"><a href="#faq">FAQ</a><a href="https://github.com/mkalmousli/NoiseSpace">Source</a><a href="https://al-mo.de" rel="author">al-mo.de</a>
   <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button></nav>
 </header>
 
@@ -63,6 +75,31 @@ try {
     <ul id="grid" class="grid"></ul>
     <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
   </section>
+<section id="faq" class="faqs">
+  <h2 class="lbl">FAQ &amp; science</h2>
+  <details class="faq"><summary>Where do the sounds come from?</summary><p>Nothing is recorded or downloaded. Every sound is synthesized live in your browser from simple physical models (Web Audio API), so the whole app is tiny, private and works offline.</p></details>
+  <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
+  <details class="faq"><summary>Does noise really help me focus or sleep?</summary><p>Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works.</p></details>
+  <details class="faq"><summary>How is rain generated?</summary><p>Each raindrop makes an air bubble that rings at its Minnaert resonance, about 3.26 / R hertz for a bubble of radius R metres. Drops land at random (Poisson) times with an exponential size spread, as in real rain.</p></details>
+  <details class="faq"><summary>What about fire, stream, ocean and crickets?</summary><p>Fire is a low roar plus random crackles whose sizes follow a heavy-tailed power law, like other crackling-noise systems. Streams are many rising-pitch bubbles. Ocean is a swell, crash and foam cycle of about 10 seconds. Crickets chirp in 3-pulse trains near 4.5 kHz.</p></details>
+  <details class="faq"><summary>What is the focus tone? Do I need headphones?</summary><p>It plays 200 Hz in one ear and 210 Hz in the other, so your brain perceives a 10 Hz (alpha range) binaural beat. Headphones are required. A 2019 meta-analysis found small benefits for attention and anxiety, but the effect is not guaranteed.</p></details>
+  <details class="faq"><summary>Why can't I hear anything on my phone?</summary><p>Tap a sound or the play button first, because browsers block audio until you interact. Then check the volume, the silent switch and that the tab is not muted.</p></details>
+  <details class="faq"><summary>Is it private? Does it work offline?</summary><p>Yes. There are no accounts, cookies or trackers. Volumes and theme are stored only on your device, and after the first visit the app works without internet.</p></details>
+  <details class="faq"><summary>Can I contribute or report a bug?</summary><p>Yes! NoiseSpace is open source under the MIT license. Source code, issues and ideas live on GitHub: <a href="https://github.com/mkalmousli/NoiseSpace">github.com/mkalmousli/NoiseSpace</a>.</p></details>
+  <h2 class="lbl">References</h2>
+  <ul class="refs">
+    <li>Minnaert, M. (1933). On musical air-bubbles and the sounds of running water. <i>Phil. Mag.</i> 16.</li>
+    <li>Prosperetti, A. &amp; Oguz, H. (1993). The impact of drops on liquid surfaces and the underwater noise of rain. <i>Annu. Rev. Fluid Mech.</i> 25.</li>
+    <li>Marshall, J. &amp; Palmer, W. (1948). The distribution of raindrops with size. <i>J. Meteorology</i> 5.</li>
+    <li>Sethna, J., Dahmen, K. &amp; Myers, C. (2001). Crackling noise. <i>Nature</i> 410.</li>
+    <li>Voss, R. &amp; Clarke, J. (1975). 1/f noise in music and speech. <i>Nature</i> 258.</li>
+    <li>Dolbear, A. (1897). The cricket as a thermometer. <i>American Naturalist</i> 31.</li>
+    <li>Söderlund, G. et al. (2007). Listening to noise improves cognitive performance in children with ADHD. <i>J. Child Psychol. Psychiatry</i> 48.</li>
+    <li>Zhou, J. et al. (2012). Pink noise: effect on complexity synchronization of brain activity and sleep consolidation. <i>J. Theor. Biol.</i> 306.</li>
+    <li>Garcia-Argibay, M. et al. (2019). Efficacy of binaural auditory beats in cognition, anxiety and pain perception: a meta-analysis. <i>Psychol. Res.</i> 83.</li>
+    <li>Kellet, P. Pink noise filter (musicdsp.org), used for the pink noise generator.</li>
+  </ul>
+</section>
 </main>
 
 <div class="dock" role="region" aria-label="Playback controls">
@@ -80,7 +117,7 @@ try {
 </div>
 
 <footer class="wrap foot">
-  <a href="faq.html">FAQ &amp; science</a> &middot; <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
+  <a href="#faq">FAQ &amp; science</a> &middot; <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
   <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>
   Made by <a href="https://al-mo.de" rel="author">al-mo.de</a> &middot; MIT licensed
 </footer>

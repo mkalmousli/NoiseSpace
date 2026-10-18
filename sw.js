@@ -1,10 +1,10 @@
 /* Cache-first service worker so the app loads instantly and works offline. */
-var CACHE = 'noisespace-v2';
+var CACHE = 'noisespace-v3';
 var FILES = [
   './', 'index.html', 'logo.svg', 'manifest.json',
   'css/base.css', 'css/layout.css', 'css/aero.css',
   'js/store.js', 'js/icons.js', 'js/noise.js', 'js/drops.js', 'js/waves.js', 'js/helpers.js',
-  'js/sounds-nature.js', 'js/sounds-tone.js', 'js/catalog.js', 'js/engine.js', 'js/ui.js', 'js/app.js', 'faq.html'
+  'js/sounds-nature.js', 'js/sounds-tone.js', 'js/catalog.js', 'js/engine.js', 'js/ui.js', 'js/app.js'
 ];
 
 self.addEventListener('install', function (e) {
