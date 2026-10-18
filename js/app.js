@@ -1,6 +1,7 @@
-/* Wiring: clicks, sliders, presets, sleep timer, theme, service worker. */
+/* Wiring: clicks, sliders, presets, theme, service worker. */
 (function (w, d) {
-  var NS = w.NS, $ = NS.$, S = NS.state, last = [], endAt = 0, timer = 0;
+  var NS = w.NS, $ = NS.$, S = NS.state, last = [];
+  NS.timerEnd = function () { last = []; NS.sync(); };
 
   function setSlider(id, v) {
     var el = $('c-' + id).lastChild;
@@ -29,21 +30,6 @@
     else if (last.length) { for (var i = 0; i < last.length; i++) NS.toggle(last[i], true); }
     else preset(NS.presets[1]);
     NS.sync();
-  }
-
-  function showTimer() {
-    var s = Math.max(0, Math.round((endAt - new Date().getTime()) / 1000));
-    $('left').firstChild.nodeValue = s ? 'Stops in ' + Math.floor(s / 60) + ':' + (s % 60 < 10 ? '0' : '') + s % 60 : '';
-    if (!s) { clearInterval(timer); NS.fadeOut(function () { last = []; NS.sync(); $('sleep').value = '0'; }); }
-  }
-
-  function setTimer(min) {
-    clearInterval(timer);
-    $('left').firstChild.nodeValue = '';
-    if (!min) return;
-    endAt = new Date().getTime() + min * 60000;
-    timer = setInterval(showTimer, 1000);
-    showTimer();
   }
 
   function theme(t) {
@@ -75,7 +61,6 @@
   });
   $('master').addEventListener('input', function () { NS.setMaster(this.value / 100); NS.save(); });
   $('play').addEventListener('click', playPause);
-  $('sleep').addEventListener('change', function () { setTimer(+this.value); });
   $('theme').addEventListener('click', function () {
     theme(S.theme === 'dark' ? 'light' : 'dark');
     NS.save();

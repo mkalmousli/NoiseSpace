@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NoiseSpace – Free Focus, Study &amp; Relaxation Sounds</title>
+<title>Blanket Web – Free Focus, Study &amp; Relaxation Sounds</title>
 <meta name="description" content="Mix rain, ocean, fireplace, wind and white, pink or brown noise for focus, study, work and sleep. Free, fast, offline-ready and ad-free.">
 <meta name="theme-color" content="#f3f8f9">
 <meta name="color-scheme" content="light dark">
@@ -15,14 +15,14 @@
 <link rel="manifest" href="manifest.json">
 <link rel="author" href="https://al-mo.de">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="NoiseSpace">
-<meta property="og:title" content="NoiseSpace – Focus, Study &amp; Relaxation Sounds">
+<meta property="og:site_name" content="Blanket Web">
+<meta property="og:title" content="Blanket Web – Focus, Study &amp; Relaxation Sounds">
 <meta property="og:description" content="Mix rain, ocean, fire, wind and noise colors. Free, fast and beautiful.">
 <meta property="og:url" content="https://mkalmousli.github.io/NoiseSpace/">
 <meta property="og:image" content="https://mkalmousli.github.io/NoiseSpace/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"NoiseSpace",
+{"@context":"https://schema.org","@type":"WebApplication","name":"Blanket Web",
 "url":"https://mkalmousli.github.io/NoiseSpace/","applicationCategory":"MultimediaApplication",
 "operatingSystem":"Any","browserRequirements":"Requires Web Audio API",
 "description":"Free ambient sound mixer for focus, study and relaxation.",
@@ -43,7 +43,7 @@ try {
 <link rel="stylesheet" href="css/calm.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Where do the sounds come from?","acceptedAnswer":{"@type":"Answer","text":"Twelve sounds (rain, storm, waves, wind, stream, fire, birds, summer night, boat, train, city and coffee shop) are real field recordings from Freesound.org and SoundBible (CC0, CC BY or public domain), trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Authors and licences are listed under Credits."}},
+{"@type":"Question","name":"Where do the sounds come from?","acceptedAnswer":{"@type":"Answer","text":"Twelve sounds (rain, storm, waves, wind, stream, fire, birds, summer night, boat, train, city and coffee shop) are real field recordings from Freesound.org and SoundBible (CC0, CC BY or public domain), trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. The selection follows the open-source app Blanket. Authors and licences are listed under Credits."}},
 {"@type":"Question","name":"What is the difference between white, pink and brown noise?","acceptedAnswer":{"@type":"Answer","text":"They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble)."}},
 {"@type":"Question","name":"Does noise really help me focus or sleep?","acceptedAnswer":{"@type":"Answer","text":"Evidence is promising but mixed. Some studies found moderate background noise improved attention (Söderlund et al., 2007) and that steady pink noise helped sleep stability (Zhou et al., 2012). Responses vary by person, so try a few and keep what works."}},
 {"@type":"Question","name":"How is rain generated?","acceptedAnswer":{"@type":"Answer","text":"Each raindrop makes an air bubble that rings at its Minnaert resonance, about 3.26 / R hertz for a bubble of radius R metres. Drops land at random (Poisson) times with an exponential size spread, as in real rain."}},
@@ -51,21 +51,21 @@ try {
 {"@type":"Question","name":"What is the focus tone? Do I need headphones?","acceptedAnswer":{"@type":"Answer","text":"It plays 200 Hz in one ear and 210 Hz in the other, so your brain perceives a 10 Hz (alpha range) binaural beat. Headphones are required. A 2019 meta-analysis found small benefits for attention and anxiety, but the effect is not guaranteed."}},
 {"@type":"Question","name":"Why can't I hear anything on my phone?","acceptedAnswer":{"@type":"Answer","text":"Tap a sound or the play button first, because browsers block audio until you interact. Then check the volume, the silent switch and that the tab is not muted."}},
 {"@type":"Question","name":"Is it private? Does it work offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. There are no accounts, cookies or trackers. Volumes and theme are stored only on your device, and after the first visit the app works without internet."}},
-{"@type":"Question","name":"Can I contribute or report a bug?","acceptedAnswer":{"@type":"Answer","text":"Yes! NoiseSpace is open source under the MIT license. Source code, issues and ideas live on GitHub: github.com/mkalmousli/NoiseSpace."}}]}
+{"@type":"Question","name":"Can I contribute or report a bug?","acceptedAnswer":{"@type":"Answer","text":"Yes! Blanket Web is open source under the MIT license. Source code, issues and ideas live on GitHub: github.com/mkalmousli/NoiseSpace."}}]}
 </script>
 </head>
 <body>
 <div class="app">
 <header class="top">
-  <a class="brand" href="./"><img src="img/logo.png" width="32" height="32" alt="NoiseSpace logo"><span>NoiseSpace</span></a>
+  <div class="brand"><img src="img/logo.png" width="32" height="32" alt="Blanket Web logo"><span>Blanket Web</span></div>
   <nav class="nav" aria-label="Site"><button id="info" class="gbtn" type="button" aria-label="About, FAQ and credits" aria-haspopup="dialog"></button>
   <button id="theme" class="gbtn" type="button" aria-label="Toggle dark mode"></button></nav>
 </header>
 <main>
-  <h1 class="sr">NoiseSpace: sounds for focus, study &amp; calm</h1>
+  <h1 class="sr">Blanket Web: sounds for focus, study &amp; calm</h1>
   <div id="presets" class="chips" role="group" aria-label="Presets"></div>
   <ul id="grid" class="grid"></ul>
-  <noscript><p class="note">NoiseSpace needs JavaScript to play sounds.</p></noscript>
+  <noscript><p class="note">Blanket Web needs JavaScript to play sounds.</p></noscript>
 </main>
 <div id="upd" class="upd" role="status" hidden>New version ready <button type="button" id="updgo">Update</button></div>
 <div class="dock" role="region" aria-label="Playback controls">
@@ -74,12 +74,12 @@ try {
     <span id="status" class="status">&nbsp;</span>
     <input id="master" class="vol" type="range" min="0" max="100" value="80" aria-label="Master volume">
   </div>
-  <label class="sleep"><span id="left">&nbsp;</span>
-    <select id="sleep" aria-label="Sleep timer">
-      <option value="0">Timer off</option><option value="15">15 min</option><option value="30">30 min</option>
-      <option value="60">1 hour</option><option value="90">90 min</option><option value="120">2 hours</option>
-    </select>
-  </label>
+  <button id="sleepbtn" class="sleep" type="button" aria-haspopup="dialog"><span id="left">Timer</span></button>
+  <div id="tpop" class="pop" role="dialog" aria-label="Sleep timer" hidden>
+  <div class="chips" id="tchips"><button type="button" class="chip" data-m="15">15m</button><button type="button" class="chip" data-m="30">30m</button><button type="button" class="chip" data-m="60">1h</button><button type="button" class="chip" data-m="90">90m</button></div>
+  <div class="step"><button type="button" class="gbtn" id="tdn" aria-label="Less">&minus;</button><label><input id="tmin" type="number" inputmode="numeric" min="1" max="720" value="45" aria-label="Minutes"> min</label><button type="button" class="gbtn" id="tup" aria-label="More">+</button></div>
+  <div class="acts"><button type="button" class="chip" id="toff">Off</button><button type="button" class="chip go" id="tgo">Start</button></div>
+  </div>
 </div>
 
 </div>
@@ -88,12 +88,12 @@ try {
 <div class="grab"><button id="shx" class="gbtn" type="button" aria-label="Close">&times;</button></div>
 <div class="body">
 <div class="tabs" role="tablist" id="tabs"><button type="button" role="tab" data-t="0" aria-selected="true">Help</button><button type="button" role="tab" data-t="1" aria-selected="false">Sounds</button><button type="button" role="tab" data-t="2" aria-selected="false">Science</button><button type="button" role="tab" data-t="3" aria-selected="false">Refs</button><button type="button" role="tab" data-t="4" aria-selected="false">Credits</button></div>
-<h2 class="sr" id="sh-t">About NoiseSpace</h2>
+<h2 class="sr" id="sh-t">About Blanket Web</h2>
 <section class="pane" id="p0">
-  <details class="faq"><summary>Where do the sounds come from?</summary><p>Twelve sounds (rain, storm, waves, wind, stream, fire, birds, summer night, boat, train, city and coffee shop) are real field recordings from Freesound.org and SoundBible (CC0, CC BY or public domain), trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. Authors and licences are listed under Credits.</p></details>
+  <details class="faq"><summary>Where do the sounds come from?</summary><p>Twelve sounds (rain, storm, waves, wind, stream, fire, birds, summer night, boat, train, city and coffee shop) are real field recordings from Freesound.org and SoundBible (CC0, CC BY or public domain), trimmed to a seamless loop and loaded the first time you use them. The noise colors, binaural focus tone and space drone are synthesized live in your browser from simple physical models (Web Audio API). If a recording cannot load offline, a synthesized version of that sound plays instead. The selection follows the open-source app Blanket. Authors and licences are listed under Credits.</p></details>
   <details class="faq"><summary>Why can't I hear anything on my phone?</summary><p>Tap a sound or the play button first, because browsers block audio until you interact. Then check the volume, the silent switch and that the tab is not muted.</p></details>
   <details class="faq"><summary>Is it private? Does it work offline?</summary><p>Yes. There are no accounts, cookies or trackers. Volumes and theme are stored only on your device, and after the first visit the app works without internet.</p></details>
-  <details class="faq"><summary>Can I contribute or report a bug?</summary><p>Yes! NoiseSpace is open source under the MIT license. Source code, issues and ideas live on GitHub: <a href="https://github.com/mkalmousli/NoiseSpace">github.com/mkalmousli/NoiseSpace</a>.</p></details>
+  <details class="faq"><summary>Can I contribute or report a bug?</summary><p>Yes! Blanket Web is open source under the MIT license. Source code, issues and ideas live on GitHub: <a href="https://github.com/mkalmousli/NoiseSpace">github.com/mkalmousli/NoiseSpace</a>.</p></details>
 </section>
 <section class="pane" id="p1" hidden>
   <details class="faq"><summary>What is the difference between white, pink and brown noise?</summary><p>They differ in spectral slope. White noise has equal power at every frequency (a bright hiss), pink noise falls 3 dB per octave (1/f, like natural sounds) and brown noise falls 6 dB per octave (1/f², a deep rumble).</p></details>
@@ -140,6 +140,7 @@ try {
 <footer class="foot">
   <a href="https://github.com/mkalmousli/NoiseSpace">Source code</a> &middot;
   <a href="https://github.com/mkalmousli/NoiseSpace/issues">Report an issue</a><br>
+  Sounds &amp; idea from <a href="https://github.com/rafaelmardojai/blanket">Blanket</a> by Rafael Mardojai CM (unofficial web version, not affiliated)<br>
   Made by <a href="https://al-mo.de" rel="author">al-mo.de</a> &middot; MIT licensed
 </footer>
 </div></div>
@@ -148,6 +149,6 @@ try {
 <script defer src="js/noise.js"></script><script defer src="js/drops.js"></script><script defer src="js/waves.js"></script>
 <script defer src="js/sounds-nature.js"></script><script defer src="js/sounds-tone.js"></script>
 <script defer src="js/voices.js"></script><script defer src="js/found.js"></script><script defer src="js/catalog.js"></script><script defer src="js/helpers.js"></script><script defer src="js/samples.js"></script>
-<script defer src="js/engine.js"></script><script defer src="js/ui.js"></script><script defer src="js/app.js"></script><script defer src="js/sheet.js"></script><script defer src="js/update.js"></script>
+<script defer src="js/engine.js"></script><script defer src="js/ui.js"></script><script defer src="js/timer.js"></script><script defer src="js/app.js"></script><script defer src="js/sheet.js"></script><script defer src="js/update.js"></script>
 </body>
 </html>

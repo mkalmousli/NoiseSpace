@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="img/logo.png" width="120" alt="NoiseSpace logo">
+  <img src="img/logo.png" width="120" alt="Blanket Web logo">
 </p>
 
-<h1 align="center">NoiseSpace</h1>
+<h1 align="center">Blanket Web</h1>
 
 <p align="center">
   <b>Free focus, study &amp; relaxation sounds in your browser.</b><br>
@@ -14,8 +14,8 @@
 </p>
 
 <p align="center">
-  <img src="img/screenshot-desktop.png" width="640" alt="NoiseSpace on desktop, light mode">
-  <img src="img/screenshot-mobile.png" width="200" alt="NoiseSpace on mobile, dark mode">
+  <img src="img/screenshot-desktop.png" width="640" alt="Blanket Web on desktop, light mode">
+  <img src="img/screenshot-mobile.png" width="200" alt="Blanket Web on mobile, dark mode">
 </p>
 
 ## Features

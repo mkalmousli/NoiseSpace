@@ -21,3 +21,20 @@ body.playing .play { animation: breathe 6s ease-in-out infinite; }
 .refs li { margin-bottom: 4px; }
 .sheet .grab { position: absolute; top: 6px; right: 8px; padding: 0; }
 .sheet .body { padding-top: 50px; }
+
+.brand { cursor: default; user-select: none; }
+.sleep { padding: 6px 12px; border-radius: 12px; font-size: 1rem; line-height: 1; background: var(--card); border: 1px solid var(--line); color: var(--mute); min-width: 64px; }
+.sleep.on { color: var(--on); background: var(--acc); border-color: var(--acc); }
+.dock { position: relative; }
+.pop { position: absolute; z-index: 22; right: 0; bottom: calc(100% + 10px); width: min(300px, 100%); padding: 12px; border-radius: 18px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(0, 0, 0, .3); display: flex; flex-direction: column; gap: 10px; animation: rise .18s ease-out; }
+.pop[hidden] { display: none; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+.pop .chips { justify-content: space-between; }
+.pop .chip { flex: 1; }
+.step { display: flex; align-items: center; justify-content: space-between; }
+.step label { font-size: 1.3rem; color: var(--mute); }
+.step input { width: 4ch; padding: 2px 0; font-size: 1.6rem; text-align: center; color: var(--ink); background: none; border: 0; border-bottom: 2px solid var(--acc); -moz-appearance: textfield; }
+.step input::-webkit-outer-spin-button, .step input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.acts { display: flex; gap: 8px; }
+.acts .chip { flex: 1; padding: 5px 0; }
+.chip.go { background: var(--acc); color: var(--on); border-color: var(--acc); }
