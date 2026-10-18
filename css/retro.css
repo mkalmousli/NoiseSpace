@@ -34,6 +34,7 @@ input#tmin { -webkit-user-select: text; user-select: text; }
 * { cursor: url(../img/cursor.png) 0 0, default; }
 button, a, summary, select, .tog, .chip, .vol, label, [role=button] { cursor: url(../img/cursor-link.png) 10 0, pointer; }
 input#tmin { cursor: text; }
+button *, a *, summary *, .tog *, .chip *, label * { cursor: inherit; pointer-events: none; }
 * { scrollbar-width: thin; scrollbar-color: var(--acc) var(--card); }
 ::-webkit-scrollbar { width: 12px; height: 12px; }
 ::-webkit-scrollbar-track { background: var(--card); border-left: 2px solid var(--line); }
